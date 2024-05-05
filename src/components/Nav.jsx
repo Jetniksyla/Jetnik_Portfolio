@@ -12,7 +12,7 @@ const Nav = () => {
       <div className="flex items-center justify-between p-10 lg:flex-row">
         <div className="flex items-center space-x-2 font-serif text-3xl tracking-wider">
           <CgTag size="1.5em" className="text-indigo-600" />
-          <span className="text-indigo-600">PORTFOLIO</span>
+          <span className="text-indigo-600">Hire Me</span>
         </div>
         <div>
           {toggle ? (
@@ -70,7 +70,7 @@ const Nav = () => {
             href="#"
             className="block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
           >
-            Portfolio
+            Projects
           </a>
           <a
             href="#"

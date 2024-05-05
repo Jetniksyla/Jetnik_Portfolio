@@ -1,6 +1,7 @@
 import Nav from "./Nav";
 import Section from "./Section";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 const Main = () => {
   return (
@@ -8,6 +9,7 @@ const Main = () => {
       <Nav />
       <Section />
       <Projects />
+      <Contact/>
     </div>
   );
 };
