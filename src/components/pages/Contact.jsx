@@ -20,7 +20,7 @@ const Contact = () => {
     if (formData.email.includes('@')) {
       console.log('Submitting form data:', formData);
       alert('Thank you for your message!');
-      // Here you might want to integrate an actual submission logic, e.g., via an API
+      // Here I might want to integrate an actual submission logic in the future, via an API
     } else {
       alert('Please enter a valid email address.');
     }

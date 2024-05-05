@@ -1,15 +1,15 @@
 import { BsFacebook, BsTwitter, BsInstagram, BsSpotify } from "react-icons/bs";
 import AvatarPic from "../assets/avatar.png";
 
-const Section = () => {
+const About = () => {
   return (
     <section className="flex flex-col lg:flex-row justify-around items-center bg-gray-100 text-gray-800 p-5 lg:p-10 space-y-5 lg:space-y-0">
       <div className="flex flex-col items-start w-full lg:w-1/3">
         <p className="text-3xl lg:text-4xl mb-3 lg:mb-5 text-indigo-600">
           👋 I'm
         </p>
-        <h1 className="text-5xl lg:text-6xl font-bold">Jetnik Syla</h1>
-        <hr className="my-3 lg:my-4 border-t-2 border-indigo-300 w-full" />
+        <h1 className="text-6xl lg:text-6xl font-bold">Jetnik Syla</h1>
+        <hr className="my-3 lg:my-4 border-t-2 border-indigo-300 w-full h-12" />
         <p className="text-base lg:text-lg leading-relaxed">
           Innovative full-stack web developer with a background in music,
           currently honing my skills at Columbia Engineering Bootcamp.
@@ -61,4 +61,4 @@ const Section = () => {
   );
 };
 
-export default Section;
+export default About;
