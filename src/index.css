@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* :root {
+  --charcoal: #36454F;
+  --gainsboro: #DCDCDC;
+  --azure: #6152b8;
+  --orange: #FFA500;
+}
+
+.bg-charcoal { background-color: var(--charcoal); }
+.text-gainsboro { color: var(--gainsboro); }
+.text-azure { color: var(--azure); }
+.text-orange { color: var(--orange); }
+.hover\:bg-orange:hover { background-color: var(--orange); }
+.hover\:text-charcoal:hover { color: var(--charcoal); } */
