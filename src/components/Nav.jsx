@@ -39,7 +39,7 @@ const Nav = () => {
               href="#"
               className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
             >
-              Portfolio
+              Projects
             </a>
             <a
               href="#"
