@@ -5,12 +5,12 @@ import coolImage from "../assets/cool.png";
 const Homepage = () => {
   return (
     <>
-      <section className="font-roboto flex flex-col lg:flex-row justify-center items-center bg-gradient-to-br from-blue-200 to-indigo-100 text-gray-800 p-5 lg:p-20 min-h-screen space-y-10 lg:space-x-10">
-        <div className="flex flex-col items-center w-full lg:w-1/3 space-y-5">
+      <section className="font-roboto flex flex-col flex-wrap lg:flex-row justify-center items-center bg-gradient-to-br from-blue-200 to-indigo-100 text-gray-800 p-5 lg:p-20 min-h-screen space-y-10 lg:space-x-10">
+        <div className="flex flex-col items-center w-full lg:w-1/2 space-y-5">
           <p className="text-3xl lg:text-4xl font-semibold text-indigo-700">
             👋 I'm
           </p>
-          <h1 className="text-7xl lg:text-9xl font-bold text-gray-800">
+          <h1 className="text-7xl lg:text-6xl font-bold text-gray-800">
             Jetnik Syla
           </h1>
           <hr className="border-t-4 border-indigo-300 w-full" />
@@ -20,7 +20,7 @@ const Homepage = () => {
             leadership and creative problem-solving in software development.
           </p>
         </div>
-        <div className="flex justify-center items-center w-full lg:w-1/3">
+        <div className="flex justify-center items-center w-full lg:w-1/2">
           <img
             src={AvatarPic}
             alt="Jetnik Syla"
@@ -28,7 +28,7 @@ const Homepage = () => {
             style={{ width: "300px", height: "300px" }}
           />
         </div>
-        <div className="flex flex-col items-center w-full lg:w-1/3 space-y-5">
+        <div className="flex flex-col items-center w-full lg:w-1/2 space-y-5">
           <p className="text-3xl lg:text-4xl font-semibold text-indigo-700">
             About Me
           </p>
