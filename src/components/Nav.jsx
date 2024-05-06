@@ -8,7 +8,7 @@ const Nav = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <div className="font-roboto `bg-gray-100 text-gray-800">
+    <div className="font-roboto bg-gray-100 text-gray-800">
       <div className="flex items-center justify-between p-10 lg:flex-row">
         <div className="flex items-center space-x-2 font-serif text-3xl tracking-wider">
           <CgTag size="1.5em" className="text-indigo-600" />
