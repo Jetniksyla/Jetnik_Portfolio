@@ -3,34 +3,18 @@ import ResumeImage from '/src/assets/Resume.png';
 
 const Resume = () => {
   return (
-    <div style={{
-      textAlign: 'center', 
-      backgroundColor: '#f0f0f0', 
-      fontFamily: "monospace",
-      fontSize: "30px",
-      padding: '20px', 
-      borderRadius: '8px',
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
-    }}>
-      <h1 style={{ color: '#333' }}>Resume</h1>
-      <img src={ResumeImage} alt="Resume" style={{
-        maxWidth: '100%', 
-        height: 'auto', 
-        border: '1px solid #ddd', 
-        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', 
-        borderRadius: '4px',
-        margin: "auto",
-      }} />
-      <a href={ResumeImage} download style={{
-        display: 'inline-block',
-        marginTop: '20px',
-        padding: '10px 20px',
-        backgroundColor: 'white', 
-        color: 'black', 
-        borderRadius: '5px',
-        textDecoration: 'none',
-        border: '1px solid #ccc' 
-      }}>
+    <div className="mx-auto my-10 max-w-4xl p-8 bg-gray-100 rounded-lg shadow-lg text-center">
+      <h1 className="text-4xl font-bold text-indigo-600 mb-6">Resume</h1>
+      <img 
+        src={ResumeImage} 
+        alt="Resume" 
+        className="max-w-full h-auto border border-gray-300 rounded shadow"
+      />
+      <a 
+        href={ResumeImage} 
+        download
+        className="mt-6 inline-block bg-indigo-600 text-white font-bold py-2 px-4 rounded-full hover:bg-indigo-700 transition-colors duration-300"
+      >
         Download Resume
       </a>
     </div>

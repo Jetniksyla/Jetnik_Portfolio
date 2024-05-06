@@ -5,6 +5,7 @@ import Main from './components/Main.jsx';
 import Contact from "./components/pages/Contact";
 import Resume from "./components/pages/Resume.jsx"
 import Projects from "./components/pages/Projects.jsx"
+import AboutMe from './components/pages/AboutMe.jsx';
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
-
+          <Route path="/about" element={<AboutMe />} />
         </Routes>
       </div>
     </Router>

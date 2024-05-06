@@ -2,7 +2,7 @@ import { BsFacebook, BsTwitter, BsInstagram, BsSpotify } from "react-icons/bs";
 import AvatarPic from "../assets/avatar.png";
 import coolImage from "../assets/cool.png"
 
-const About = () => {
+const Homepage = () => {
   return (
     <section className="flex flex-col lg:flex-row justify-around items-center bg-gray-100 text-gray-800 p-5 lg:p-10 space-y-5 lg:space-y-0">
       <div className="flex flex-col items-start w-full lg:w-1/3">
@@ -62,4 +62,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Homepage;
