@@ -1,34 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.email.includes('@')) {
-      console.log('Submitting form data:', formData);
-      alert('Thank you for your message!');
+    if (formData.email.includes("@")) {
+      console.log("Submitting form data:", formData);
+      alert("Thank you for your message!");
       // Here I might want to integrate an actual submission logic in the future, via an API
     } else {
-      alert('Please enter a valid email address.');
+      alert("Please enter a valid email address.");
     }
   };
 
   return (
     <div className="font-roboto max-w-lg mx-auto my-10 p-8 bg-gray-100 shadow-lg rounded-lg">
-      <h1 className="text-2xl font-bold text-center mb-6 text-indigo-600">Contact Form</h1>
+      <h1 className="text-2xl font-bold text-center mb-6 text-indigo-600">
+        Contact Form
+      </h1>
       <form onSubmit={handleSubmit}>
         <label className="block mb-4">
           <span className="text-gray-800">Name:</span>
@@ -78,5 +80,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-

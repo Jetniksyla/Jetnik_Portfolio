@@ -9,11 +9,11 @@ import WeatherForecast from "../../assets/Weather_Forecast_API_.png";
 export default function Projects() {
   const projects = [
     { title: "Bookworm", img: Bookworm, desc: "Book Search Application", url: "#" },
-    { title: "CSS Portfolio", img: CssPortfolio, desc: "CSS-based Portfolio", url: "#" },
-    { title: "Event Space", img: EventSpace, desc: "Event Management Platform", url: "#" },
-    { title: "Note Taker", img: NoteTaker, desc: "Note Taking Application", url: "#" },
+    { title: "Weather Forecast", img: WeatherForecast, desc: "Weather Forecast Application", url: "#" },
     { title: "Tech Blog", img: TechBlog, desc: "Technical Blogging Platform", url: "#" },
-    { title: "Weather Forecast", img: WeatherForecast, desc: "Weather Forecast Application", url: "#" }
+    { title: "Event Space", img: EventSpace, desc: "Event Management Platform", url: "#" },
+    { title: "CSS Portfolio", img: CssPortfolio, desc: "CSS-based Portfolio", url: "#" },
+    { title: "Note Taker", img: NoteTaker, desc: "Note Taking Application", url: "#" },
   ];
 
   return (

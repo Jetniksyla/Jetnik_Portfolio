@@ -1,6 +1,4 @@
-import Nav from "./Nav";
 import Homepage from "./Homepage";
-import Projects from "../components/pages/Projects";
 
 const Main = () => {
   return (

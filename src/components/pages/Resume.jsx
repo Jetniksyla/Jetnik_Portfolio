@@ -1,4 +1,3 @@
-import React from "react";
 import ResumeImage from "/src/assets/Resume.png";
 
 const Resume = () => {
