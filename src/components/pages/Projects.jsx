@@ -1,10 +1,10 @@
 import React from "react";
-import Bookworm from "../assets/Bookworm.png";
-import CssPortfolio from "../assets/CSS_Portfolio.png";
-import EventSpace from "../assets/Event_Space.png";
-import NoteTaker from "../assets/Note_Taker.png";
-import TechBlog from "../assets/Tech_Blog.png";
-import WeatherForecast from "../assets/Weather_Forecast_API_.png";
+import Bookworm from "../../assets/Bookworm.png";
+import CssPortfolio from "../../assets/CSS_Portfolio.png";
+import EventSpace from "../../assets/Event_Space.png";
+import NoteTaker from "../../assets/Note_Taker.png";
+import TechBlog from "../../assets/Tech_Blog.png";
+import WeatherForecast from "../../assets/Weather_Forecast_API_.png";
 
 export default function Projects() {
   const projects = [

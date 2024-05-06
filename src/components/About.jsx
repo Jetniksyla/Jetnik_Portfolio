@@ -1,5 +1,6 @@
 import { BsFacebook, BsTwitter, BsInstagram, BsSpotify } from "react-icons/bs";
 import AvatarPic from "../assets/avatar.png";
+import coolImage from "../assets/cool.png"
 
 const About = () => {
   return (
