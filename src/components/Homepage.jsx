@@ -5,7 +5,7 @@ import coolImage from "../assets/cool.png";
 const Homepage = () => {
   return (
     <>
-      <section className="flex flex-col lg:flex-row justify-center items-center bg-gradient-to-br from-blue-200 to-indigo-100 text-gray-800 p-5 lg:p-20 min-h-screen space-y-10 lg:space-x-10">
+      <section className="font-roboto flex flex-col lg:flex-row justify-center items-center bg-gradient-to-br from-blue-200 to-indigo-100 text-gray-800 p-5 lg:p-20 min-h-screen space-y-10 lg:space-x-10">
         <div className="flex flex-col items-center w-full lg:w-1/3 space-y-5">
           <p className="text-3xl lg:text-4xl font-semibold text-indigo-700">
             👋 I'm

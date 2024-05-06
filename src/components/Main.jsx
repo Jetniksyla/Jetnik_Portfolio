@@ -4,7 +4,7 @@ import Projects from "../components/pages/Projects";
 
 const Main = () => {
   return (
-    <div className="bg-white-800 min-h-screen">
+    <div className="font-roboto bg-white-800 min-h-screen">
       <Homepage />
     </div>
   );
