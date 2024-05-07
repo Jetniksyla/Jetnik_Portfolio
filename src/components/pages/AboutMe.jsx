@@ -7,33 +7,75 @@ const AboutMe = () => {
       description:
         "Expertise in creating interactive and responsive user interfaces.",
       projects: [
-        "Event Space",
-        "Text Editor PWA",
-        "Contact Directory App",
-        "Weather Forecast Explorer",
-        "Jetnik's Portfolio",
-        "JavaScript Quiz",
-        "Daily Planner",
+        {
+          title: "Event Space",
+          githubUrl: "https://github.com/Jetniksyla/Event-Space",
+        },
+        {
+          title: "Text Editor PWA",
+          githubUrl: "https://github.com/Jetniksyla/Text_Editor_PWA",
+        },
+        {
+          title: "Contact Directory App",
+          githubUrl: "https://github.com/Jetniksyla/Contact-Directory-App",
+        },
+        {
+          title: "Weather Forecast Explorer",
+          githubUrl: "https://github.com/Jetniksyla/Weather_Forecast_API",
+        },
+        {
+          title: "Jetnik's Portfolio",
+          githubUrl: "https://github.com/Jetniksyla/css_portfolio",
+        },
+        {
+          title: "JavaScript Quiz",
+          githubUrl: "https://github.com/Jetniksyla/JS_basic_quizz",
+        },
+        {
+          title: "Daily Planner",
+          githubUrl: "https://github.com/Jetniksyla/daily_planner",
+        },
       ],
     },
     {
       name: "React & Redux",
       description:
         "Advanced skills in scalable front-end applications using React framework.",
-      projects: ["React Portfolio"],
+      projects: [{ title: "React Portfolio", githubUrl: "#" }],
     },
     {
       name: "Node.js & Express",
       description:
         "Developing server-side logic and robust APIs with Node.js and Express.",
       projects: [
-        "Bookworm",
-        "E-Commerce Back End",
-        "Social Network API",
-        "Note Taker App",
-        "Employee Tracker",
-        "Professional README Generator",
-        "SVG Logo Maker",
+        {
+          title: "Bookworm",
+          githubUrl: "https://github.com/Jetniksyla/Bookworm",
+        },
+        {
+          title: "E-Commerce-ORM_Project",
+          githubUrl: "https://github.com/Jetniksyla/E-Commerce-ORM_Project",
+        },
+        {
+          title: "Social Network API",
+          githubUrl: "https://github.com/Jetniksyla/Social_Network_API",
+        },
+        {
+          title: "Note Taker",
+          githubUrl: "https://github.com/Jetniksyla/Note_Taker",
+        },
+        {
+          title: "SQL Employee Tracker",
+          githubUrl: "https://github.com/Jetniksyla/SQL_Employee_Tracker",
+        },
+        {
+          title: "README.md Generator",
+          githubUrl: "https://github.com/Jetniksyla/README.md_Generator",
+        },
+        {
+          title: "Project Logo Maker",
+          githubUrl: "https://github.com/Jetniksyla/Project_Logo_Maker",
+        },
       ],
     },
     {
@@ -41,10 +83,22 @@ const AboutMe = () => {
       description:
         "Database management with both SQL and NoSQL databases for data integrity.",
       projects: [
-        "Bookworm",
-        "E-Commerce Back End",
-        "Social Network API",
-        "Employee Tracker",
+        {
+          title: "Bookworm",
+          githubUrl: "https://github.com/Jetniksyla/Bookworm",
+        },
+        {
+          title: "E-Commerce-ORM_Project",
+          githubUrl: "https://github.com/Jetniksyla/E-Commerce-ORM_Project",
+        },
+        {
+          title: "Social Network API",
+          githubUrl: "https://github.com/Jetniksyla/Social_Network_API",
+        },
+        {
+          title: "SQL Employee Tracker",
+          githubUrl: "https://github.com/Jetniksyla/SQL_Employee_Tracker",
+        },
       ],
     },
     {
@@ -52,18 +106,50 @@ const AboutMe = () => {
       description:
         "Version control with Git, collaboration using GitHub, and deployment via Heroku.",
       projects: [
-        "Bookworm",
-        "E-Commerce Back End",
-        "Contact Directory App",
-        "Note Taker App",
-        "Professional README Generator",
+        {
+          title: "Bookworm",
+          githubUrl: "https://github.com/Jetniksyla/Bookworm",
+        },
+        {
+          title: "E-Commerce-ORM_Project",
+          githubUrl: "https://github.com/Jetniksyla/E-Commerce-ORM_Project",
+        },
+        {
+          title: "Contact Directory App",
+          githubUrl: "https://github.com/Jetniksyla/Contact-Directory-App",
+        },
+        {
+          title: "Note Taker",
+          githubUrl: "https://github.com/Jetniksyla/Note_Taker",
+        },
+        {
+          title: "README.md Generator",
+          githubUrl: "https://github.com/Jetniksyla/README.md_Generator",
+        },
+        {
+          title: "Text Editor PWA",
+          githubUrl: "https://github.com/Jetniksyla/Text_Editor_PWA",
+        },
       ],
     },
     {
       name: "RESTful Services and APIs",
       description:
         "Designing and integrating RESTful services for enhanced application interoperability.",
-      projects: ["Bookworm", "E-Commerce Back End", "Social Network API"],
+      projects: [
+        {
+          title: "Bookworm",
+          githubUrl: "https://github.com/Jetniksyla/Bookworm",
+        },
+        {
+          title: "E-Commerce-ORM_Project",
+          githubUrl: "https://github.com/Jetniksyla/E-Commerce-ORM_Project",
+        },
+        {
+          title: "Social Network API",
+          githubUrl: "https://github.com/Jetniksyla/Social_Network_API",
+        },
+      ],
     },
   ];
 
@@ -90,12 +176,16 @@ const AboutMe = () => {
       </section>
       <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6 relative">
         Core Technical Skills
-
-        <span className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white px-2 text-gray-500 text-xs">
+        <span className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white px-2 text-gray-500 text-lg">
           Hover Over To See The Projects
         </span>
       </h2>
-
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
       <div className="cursor-pointer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {skills.map((skill) => (
           <div
@@ -110,16 +200,23 @@ const AboutMe = () => {
             onMouseEnter={() => setHoveredSkill(skill.name)}
             onMouseLeave={() => setHoveredSkill(null)}
           >
-            <div className="p-5">
-              <h3 className="text-lg font-semibold text-indigo-600">
+            <div className="p-7">
+              <h3 className="text-xl font-semibold text-indigo-600">
                 {skill.name}
               </h3>
-              <p className="text-sm text-gray-600">{skill.description}</p>
+              <p className="text-lg text-gray-600">{skill.description}</p>
               {hoveredSkill === skill.name && (
                 <ul className="mt-3">
                   {skill.projects.map((project, index) => (
-                    <li key={index} className="text-sm text-gray-600">
-                      {project}
+                    <li key={index} className="mt-1 p-2 text-lg text-gray-600 ">
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-indigo-600"
+                      >
+                        {project.title}
+                      </a>
                     </li>
                   ))}
                 </ul>
