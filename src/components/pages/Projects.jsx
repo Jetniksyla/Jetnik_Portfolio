@@ -15,36 +15,48 @@ export default function Projects() {
       img: Bookworm,
       desc: "Book Search Application",
       url: "#",
+      herokuUrl: "https://search-book-application-dd0c88dd233b.herokuapp.com/",
+      githubUrl: "https://github.com/Jetniksyla/Bookworm",
     },
     {
       title: "Weather Forecast",
       img: WeatherForecast,
       desc: "Weather Forecast Application",
       url: "#",
+      herokuUrl: "https://jetniksyla.github.io/Weather_Forecast_API/",
+      githubUrl: "https://github.com/Jetniksyla/Weather_Forecast_API",
     },
     {
       title: "Tech Blog",
       img: TechBlog,
       desc: "Technical Blogging Platform",
       url: "#",
+      herokuUrl: "https://jetnik-tech-blog-bdfa991fa64b.herokuapp.com/",
+      githubUrl: "https://github.com/Jetniksyla/Tech_Blog",
     },
     {
       title: "Event Space",
       img: EventSpace,
       desc: "Event Management Platform",
       url: "#",
+      herokuUrl: "https://jetniksyla.github.io/Event-Space/",
+      githubUrl: "https://github.com/Jetniksyla/Event-Space",
     },
     {
       title: "CSS Portfolio",
       img: CssPortfolio,
       desc: "CSS-based Portfolio",
       url: "#",
+      herokuUrl: "https://jetniksyla.github.io/css_portfolio/",
+      githubUrl: "https://github.com/Jetniksyla/css_portfolio",
     },
     {
       title: "Note Taker",
       img: NoteTaker,
       desc: "Note Taking Application",
       url: "#",
+      herokuUrl: "https://jetnik-note-taker-90d62e5c7166.herokuapp.com/",
+      githubUrl: "https://github.com/Jetniksyla/Note_Taker",
     },
   ];
 
@@ -92,13 +104,12 @@ export default function Projects() {
                 </button>
                 {visibleIcons[index] && (
                   <div className="flex flex-end items-end ml-2">
-                    {" "}
-                    <div className="flex items-center justify-end ml-2">
-                      <div className="flex items-center justify-end ml-2">
-                        <BsGithub className="cursor-pointer text-3xl text-gray-800 hover:text-black mx-2 transition-all duration-300 transform hover:scale-110" />
-                        <SiHeroku className="cursor-pointer text-3xl text-purple-600 hover:text-purple-800 mx-2 transition-all duration-300 transform hover:scale-110" />
-                      </div>
-                    </div>
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <BsGithub className="cursor-pointer text-3xl text-gray-800 hover:text-black mx-2 transition-all duration-300 transform hover:scale-110" />
+                    </a>
+                    <a href={project.herokuUrl} target="_blank" rel="noopener noreferrer">
+                      <SiHeroku className="cursor-pointer text-3xl text-purple-600 hover:text-purple-800 mx-2 transition-all duration-300 transform hover:scale-110" />
+                    </a>
                   </div>
                 )}
               </div>
