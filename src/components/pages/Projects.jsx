@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { SiHeroku } from "react-icons/si";
+import GitHubPagesImg from "../../assets/GitHub-Pages.png";
 import Bookworm from "../../assets/Bookworm.png";
 import CssPortfolio from "../../assets/CSS_Portfolio.png";
 import EventSpace from "../../assets/Event_Space.png";
@@ -104,12 +105,34 @@ export default function Projects() {
                 </button>
                 {visibleIcons[index] && (
                   <div className="flex flex-end items-end ml-2">
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <BsGithub className="cursor-pointer text-3xl text-gray-800 hover:text-black mx-2 transition-all duration-300 transform hover:scale-110" />
                     </a>
-                    <a href={project.herokuUrl} target="_blank" rel="noopener noreferrer">
-                      <SiHeroku className="cursor-pointer text-3xl text-purple-600 hover:text-purple-800 mx-2 transition-all duration-300 transform hover:scale-110" />
-                    </a>
+                    {project.herokuUrl.includes("github.io") ? (
+                      <a
+                        href={project.herokuUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={GitHubPagesImg}
+                          alt="GitHub Pages"
+                          className="h-8 w-8 mx-2 rounded-2xl"
+                        />
+                      </a>
+                    ) : (
+                      <a
+                        href={project.herokuUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <SiHeroku className="cursor-pointer text-3xl text-purple-600 hover:text-purple-800 mx-2 transition-all duration-300 transform hover:scale-110" />
+                      </a>
+                    )}
                   </div>
                 )}
               </div>
