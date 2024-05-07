@@ -117,6 +117,7 @@ export default function Projects() {
                         href={project.herokuUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="cursor-pointer text-3xl text-gray-800 hover:text-black mx-2 transition-all duration-300 transform hover:scale-110"
                       >
                         <img
                           src={GitHubPagesImg}
