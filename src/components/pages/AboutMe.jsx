@@ -91,7 +91,7 @@ const AboutMe = () => {
       <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6 relative">
         Core Technical Skills
 
-        <span className="px-2 absolute top-full left-1/2 transform -translate-x-1/2 bg-white px-2 text-gray-500 text-xs">
+        <span className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white px-2 text-gray-500 text-xs">
           Hover Over To See The Projects
         </span>
       </h2>
