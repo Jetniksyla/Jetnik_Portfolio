@@ -14,7 +14,7 @@ export default function Projects() {
     {
       title: "Bookworm",
       img: Bookworm,
-      desc: "Book Search Application",
+      desc: "Bookworm is a full-stack application that enhances book discovery and sharing. Built with Node.js, Express.js, and Sequelize ORM, it features dynamic page rendering with Handlebars.js. Key functionalities include user authentication, the ability to favorite books, and a seamless interactive user experience.",
       url: "#",
       herokuUrl: "https://search-book-application-dd0c88dd233b.herokuapp.com/",
       githubUrl: "https://github.com/Jetniksyla/Bookworm",
@@ -22,7 +22,7 @@ export default function Projects() {
     {
       title: "Weather Forecast",
       img: WeatherForecast,
-      desc: "Weather Forecast Application",
+      desc: "Weather Forecast Explorer is a user-friendly web app for real-time and 5-day weather forecasts. It allows users to search weather conditions in any city with a responsive design for seamless viewing on multiple devices. The app also features quick access to weather data for popular cities and robust error handling for a reliable user experience.",
       url: "#",
       herokuUrl: "https://jetniksyla.github.io/Weather_Forecast_API/",
       githubUrl: "https://github.com/Jetniksyla/Weather_Forecast_API",
@@ -30,7 +30,7 @@ export default function Projects() {
     {
       title: "Tech Blog",
       img: TechBlog,
-      desc: "Technical Blogging Platform",
+      desc: "Technical Blogging Platform is a streamlined web application for managing technical blog posts. Built with MySQL and deployable via Heroku, it ensures secure and easy setup with environment variables. The platform supports user functionalities like login, logout, account creation, and the ability to add or delete posts, facilitating robust user interaction and content management.",
       url: "#",
       herokuUrl: "https://jetnik-tech-blog-bdfa991fa64b.herokuapp.com/",
       githubUrl: "https://github.com/Jetniksyla/Tech_Blog",
@@ -38,7 +38,7 @@ export default function Projects() {
     {
       title: "Event Space",
       img: EventSpace,
-      desc: "Event Management Platform",
+      desc: "Event Space is a sleek web application that lets users discover and explore global events with ease. Built with HTML, CSS, and JavaScript, it offers a user-friendly interface where users can search events by city. From concerts to sports, Event Space provides detailed insights about performers and direct links to SeatGeek and Wikipedia for comprehensive information.",
       url: "#",
       herokuUrl: "https://jetniksyla.github.io/Event-Space/",
       githubUrl: "https://github.com/Jetniksyla/Event-Space",
@@ -46,7 +46,7 @@ export default function Projects() {
     {
       title: "CSS Portfolio",
       img: CssPortfolio,
-      desc: "CSS-based Portfolio",
+      desc: "Jetnik's Portfolio is designed for simplicity and ease of use, featuring streamlined navigation, a device-friendly layout, and smooth scrolling for effortless browsing. Contact information is prominently featured, ensuring quick connections. This portfolio effectively highlights technical proficiency and a keen eye for user-friendly design.",
       url: "#",
       herokuUrl: "https://jetniksyla.github.io/css_portfolio/",
       githubUrl: "https://github.com/Jetniksyla/css_portfolio",
@@ -54,7 +54,7 @@ export default function Projects() {
     {
       title: "Note Taker",
       img: NoteTaker,
-      desc: "Note Taking Application",
+      desc: "The Note Taker App is a user-friendly tool for creating and organizing notes. Built with Node.js and Express.js, it offers easy installation via GitHub or zip download. Users can manage notes effortlessly, with direct deployment to Heroku for seamless updates. The project enabled the developer to learn about API routes, HTML routes, and deploying applications efficiently.",
       url: "#",
       herokuUrl: "https://jetnik-note-taker-90d62e5c7166.herokuapp.com/",
       githubUrl: "https://github.com/Jetniksyla/Note_Taker",
