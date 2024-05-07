@@ -45,19 +45,19 @@ const Homepage = () => {
           <div className="flex space-x-4">
             <BsFacebook
               size={35}
-              className="text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer"
+              className="text-blue-600 hover:text-blue-800 cursor-pointer transition-all duration-300 transform hover:scale-110"
             />
             <BsTwitter
               size={35}
-              className="text-blue-400 hover:text-blue-600 transition-colors duration-300 cursor-pointer"
+              className="text-blue-400 hover:text-blue-600 cursor-pointer transition-all duration-300 transform hover:scale-110"
             />
             <BsInstagram
               size={35}
-              className="text-pink-600 hover:text-pink-800 transition-colors duration-300 cursor-pointer"
+              className="text-pink-600 hover:text-pink-800 cursor-pointer transition-all duration-300 transform hover:scale-110"
             />
             <BsSpotify
               size={35}
-              className="text-green-600 hover:text-green-800 transition-colors duration-300 cursor-pointer"
+              className="text-green-600 hover:text-green-800 cursor-pointer transition-all duration-300 transform hover:scale-110"
             />
           </div>
         </div>
