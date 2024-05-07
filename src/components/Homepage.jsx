@@ -1,5 +1,6 @@
 import { BsFacebook, BsTwitter, BsInstagram, BsSpotify } from "react-icons/bs";
 import AvatarPic from "../assets/avatar.png";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
@@ -35,9 +36,12 @@ const Homepage = () => {
             Elevating digital experiences with cutting-edge solutions and a
             creative approach.
           </p>
-          <button className="px-10 py-3 rounded-lg text-lg font-medium shadow-md bg-indigo-600 text-white hover:bg-indigo-700 transition-colors duration-300">
+          <Link
+            to="/about"
+            className="px-10 py-3 rounded-lg text-lg font-medium shadow-md bg-indigo-600 text-white hover:bg-indigo-700 transition-colors duration-300"
+          >
             Show More...
-          </button>
+          </Link>
           <div className="flex space-x-4">
             <BsFacebook
               size={35}
