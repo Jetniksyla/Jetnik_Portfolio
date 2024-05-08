@@ -8,7 +8,6 @@ import {
 } from "react-icons/bs";
 import { SiHeroku } from "react-icons/si";
 import AvatarPic from "../assets/avatar.png";
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
 
 const Homepage = () => {
@@ -19,16 +18,14 @@ const Homepage = () => {
       <section className="font-roboto flex flex-col flex-wrap lg:flex-row justify-center items-center from-blue-200 to-indigo-100 text-gray-800 p-5 lg:p-20 min-h-screen space-y-10 lg:space-x-10">
         <div className="flex flex-col items-center w-full lg:w-1/2 space-y-5">
           <p className="text-2xl lg:text-4xl font-semibold text-indigo-700">
-            👋 I'm
+            👋 I'm Jetnik Syla
           </p>
           <h1 className="text-2xl lg:text-5xl font-bold text-gray-800">
-            Jetnik Syla
+            Full-stack Web Developer
           </h1>
           <hr className="border-t-4 border-indigo-300 w-full" />
           <p className="text-lg lg:text-xl leading-relaxed text-center">
-            Innovative full-stack web developer with a background in music,
-            honing skills at Columbia Engineering Bootcamp. Known for proactive
-            leadership and creative problem-solving in software development.
+            I bring innovative full-stack solutions to the table with a background in music and technology, honing skills at Columbia Engineering Bootcamp. Known for proactive leadership and creative problem-solving.
           </p>
         </div>
         <div className="flex justify-center items-center w-full lg:w-1/2">
@@ -41,17 +38,16 @@ const Homepage = () => {
         </div>
         <div className="flex flex-col items-center w-full lg:w-1/2 space-y-5">
           <p className="text-3xl lg:text-4xl font-semibold text-indigo-700">
-            About Me
+            Connect With Me
           </p>
           <p className="text-lg lg:text-xl text-center">
-            Elevating digital experiences with cutting-edge solutions and a
-            creative approach.
+            Elevating digital experiences with cutting-edge solutions and a creative approach.
           </p>
           <button
             onClick={() => setShowMore(!showMore)}
             className="px-10 py-3 rounded-lg text-lg font-medium shadow-md bg-indigo-600 text-white hover:bg-indigo-700 transition-colors duration-300"
           >
-            Show More...
+            {showMore ? "Show Less" : "Show More"}
           </button>
           <div className="flex space-x-4">
             <a
@@ -61,7 +57,7 @@ const Homepage = () => {
             >
               <BsGithub
                 size={45}
-                className="text-gray-600 hover:text-black cursor-pointer transition-all duration-300 transform hover:scale-110"
+                className="text-gray-600 hover:text-black transition-all duration-300 transform hover:scale-110"
               />
             </a>
             <a
@@ -71,7 +67,7 @@ const Homepage = () => {
             >
               <BsLinkedin
                 size={45}
-                className="text-blue-700 hover:text-blue-900 cursor-pointer transition-all duration-300 transform hover:scale-110"
+                className="text-blue-700 hover:text-blue-900 transition-all duration-300 transform hover:scale-110"
               />
             </a>
             <a
@@ -81,26 +77,26 @@ const Homepage = () => {
             >
               <SiHeroku
                 size={45}
-                className="text-purple-600 hover:text-purple-800 cursor-pointer transition-all duration-300 transform hover:scale-110"
+                className="text-purple-600 hover:text-purple-800 transition-all duration-300 transform hover:scale-110"
               />
             </a>
             {showMore && (
               <>
                 <BsFacebook
                   size={45}
-                  className="text-blue-600 hover:text-blue-800 cursor-pointer transition-all duration-300 transform hover:scale-110"
+                  className="text-blue-600 hover:text-blue-800 transition-all duration-300 transform hover:scale-110"
                 />
                 <BsInstagram
                   size={45}
-                  className="text-pink-600 hover:text-pink-800 cursor-pointer transition-all duration-300 transform hover:scale-110"
+                  className="text-pink-600 hover:text-pink-800 transition-all duration-300 transform hover:scale-110"
                 />
                 <BsSpotify
                   size={45}
-                  className="text-green-600 hover:text-green-800 cursor-pointer transition-all duration-300 transform hover:scale-110"
+                  className="text-green-600 hover:text-green-800 transition-all duration-300 transform hover:scale-110"
                 />
                 <BsTwitter
                   size={45}
-                  className="text-blue-400 hover:text-blue-600 cursor-pointer transition-all duration-300 transform hover:scale-110"
+                  className="text-blue-400 hover:text-blue-600 transition-all duration-300 transform hover:scale-110"
                 />
               </>
             )}

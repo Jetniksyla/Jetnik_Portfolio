@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
+
 const AboutMe = () => {
   const skills = [
     {
+
       name: "JavaScript, HTML5, CSS3",
       description:
         "Expertise in creating interactive and responsive user interfaces.",

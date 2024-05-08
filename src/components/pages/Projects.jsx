@@ -104,7 +104,7 @@ export default function Projects() {
                     onClick={() => toggleIcons(index)}
                     className="bg-indigo-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-indigo-500 transition-colors duration-300"
                   >
-                    View More
+                    More Info...
                   </button>
                   {visibleIcons[index] && (
                     <div className="flex flex-end items-end ml-2">

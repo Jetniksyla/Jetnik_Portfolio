@@ -29,7 +29,7 @@ const Contact = () => {
   return (
     <div className="font-roboto max-w-lg mx-auto my-10 p-8 bg-gray-100 shadow-lg rounded-lg">
       <h1 className="text-2xl font-bold text-center mb-6 text-indigo-600">
-        Contact Form
+        Contact Me
       </h1>
       <form onSubmit={handleSubmit}>
         <label className="block mb-4">
