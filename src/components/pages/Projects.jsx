@@ -75,7 +75,7 @@ export default function Projects() {
 
   return (
     <>
-      <h1 className="font-roboto text-center text-4xl font-bold my-10 text-indigo-600 mb-10">
+      <h1 className="text-center text-4xl font-bold my-10 text-indigo-600 mb-10" style={{fontFamily: 'math'}}>
         Projects
       </h1>
       <div className="font-roboto mx-20 my-20 p-2 shadow-lg rounded-lg">

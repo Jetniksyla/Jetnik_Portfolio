@@ -156,12 +156,12 @@ const AboutMe = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
   return (
-    <div className="font-sans mx-20 my-20 p-5 bg-gray-100 shadow-lg rounded-lg">
+    <div className=" mx-20 my-20 p-5 bg-gray-100 shadow-lg rounded-lg" style={{fontFamily: 'math'}}>
       <h1 className="text-center text-4xl font-bold text-indigo-700 mb-10">
         Jetnik Syla
       </h1>
       <section className="mb-10 text-center max-w-4xl mx-auto">
-        <p className="text-lg leading-relaxed font-light">
+        <p className="text-xl leading-relaxed font-light">
           I am a passionate full-stack web developer with a background in music,
           honing my skills through the Columbia Engineering Bootcamp. I am
           proficient in building scalable web applications and have a knack for
@@ -170,7 +170,7 @@ const AboutMe = () => {
           modeling, and spending time at the beach. My diverse interests fuel my
           creativity in software development.
         </p>
-        <p className="italic text-gray-600 text-sm">
+        <p className="italic text-gray-600 text-m">
           From the precision of music to the logic of coding, my journey is
           driven by a relentless curiosity and a commitment to excellence.
         </p>
@@ -196,7 +196,10 @@ const AboutMe = () => {
             {hoveredSkill === skill.name && (
               <ul className="mt-3 list-disc list-inside">
                 {skill.projects.map((project, index) => (
-                  <li key={index} className="text-gray-800 hover:text-indigo-600">
+                  <li
+                    key={index}
+                    className="text-gray-800 hover:text-indigo-600"
+                  >
                     <a
                       href={project.githubUrl}
                       target="_blank"

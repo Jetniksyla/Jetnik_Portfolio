@@ -15,12 +15,12 @@ const Homepage = () => {
 
   return (
     <>
-      <section className="font-roboto flex flex-col flex-wrap lg:flex-row justify-center items-center from-blue-200 to-indigo-100 text-gray-800 p-5 lg:p-20 min-h-screen space-y-10 lg:space-x-10">
+      <section className="flex flex-col flex-wrap lg:flex-row justify-center items-center from-blue-200 to-indigo-100 text-gray-800 p-5 lg:p-20 min-h-screen space-y-10 lg:space-x-10" style={{fontFamily: 'math'}}>
         <div className="flex flex-col items-center w-full lg:w-1/2 space-y-5">
           <p className="text-2xl lg:text-4xl font-semibold text-indigo-700">
             👋 I'm Jetnik Syla
           </p>
-          <h1 className="text-2xl lg:text-5xl font-bold text-gray-800">
+          <h1 className="text-2xl lg:text-4xl font-bold text-gray-800">
             Full-stack Web Developer
           </h1>
           <hr className="border-t-4 border-indigo-300 w-full" />
@@ -32,7 +32,7 @@ const Homepage = () => {
           <img
             src={AvatarPic}
             alt="Jetnik Syla"
-            className="rounded-full shadow-xl border-8 border-white"
+            className="rounded-full shadow-2xl border-8 border-white"
             style={{ width: "300px", height: "300px" }}
           />
         </div>

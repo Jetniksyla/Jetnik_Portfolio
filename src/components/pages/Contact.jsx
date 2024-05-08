@@ -27,7 +27,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="font-roboto max-w-lg mx-auto my-10 p-8 bg-gray-100 shadow-lg rounded-lg">
+    <div className="max-w-lg mx-auto my-10 p-8 bg-gray-100 shadow-lg rounded-lg" style={{fontFamily: 'math'}}>
       <h1 className="text-2xl font-bold text-center mb-6 text-indigo-600">
         Contact Me
       </h1>
