@@ -45,7 +45,7 @@ const Homepage = () => {
             src={AvatarPic}
             alt="Jetnik Syla"
             className="relative z-10 rounded-full shadow-2xl border-8 border-white"
-            style={{ width: "300px", height: "300px" }}
+            style={{ width: "300px", height: "300px", opacity: 0.9 }}
           />
         </div>
         <div className="flex flex-col items-center w-full lg:w-1/2 space-y-5">
