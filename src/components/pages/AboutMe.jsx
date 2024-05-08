@@ -156,7 +156,7 @@ const AboutMe = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
   return (
-    <div className=" mx-20 my-20 p-5 bg-gray-100 shadow-lg rounded-lg" style={{fontFamily: 'math'}}>
+    <div className=" mx-20 my-20 p-6 shadow-lg rounded-lg" style={{fontFamily: 'math'}}>
       <h1 className="text-center text-4xl font-bold text-indigo-700 mb-10">
         Jetnik Syla
       </h1>
