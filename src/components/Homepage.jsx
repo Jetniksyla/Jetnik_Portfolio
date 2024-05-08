@@ -54,34 +54,52 @@ const Homepage = () => {
             Show More...
           </button>
           <div className="flex space-x-4">
-            <BsGithub
-              size={35}
-              className="text-gray-600 hover:text-black cursor-pointer transition-all duration-300 transform hover:scale-110"
-            />
-            <BsLinkedin
-              size={35}
-              className="text-blue-700 hover:text-blue-900 cursor-pointer transition-all duration-300 transform hover:scale-110"
-            />
-            <SiHeroku
-              size={35}
-              className="text-purple-600 hover:text-purple-800 cursor-pointer transition-all duration-300 transform hover:scale-110"
-            />
+            <a
+              href="https://github.com/Jetniksyla"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsGithub
+                size={45}
+                className="text-gray-600 hover:text-black cursor-pointer transition-all duration-300 transform hover:scale-110"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jetnik-syla/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsLinkedin
+                size={45}
+                className="text-blue-700 hover:text-blue-900 cursor-pointer transition-all duration-300 transform hover:scale-110"
+              />
+            </a>
+            <a
+              href="https://search-book-application-dd0c88dd233b.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SiHeroku
+                size={45}
+                className="text-purple-600 hover:text-purple-800 cursor-pointer transition-all duration-300 transform hover:scale-110"
+              />
+            </a>
             {showMore && (
               <>
                 <BsFacebook
-                  size={35}
+                  size={45}
                   className="text-blue-600 hover:text-blue-800 cursor-pointer transition-all duration-300 transform hover:scale-110"
                 />
                 <BsInstagram
-                  size={35}
+                  size={45}
                   className="text-pink-600 hover:text-pink-800 cursor-pointer transition-all duration-300 transform hover:scale-110"
                 />
                 <BsSpotify
-                  size={35}
+                  size={45}
                   className="text-green-600 hover:text-green-800 cursor-pointer transition-all duration-300 transform hover:scale-110"
                 />
                 <BsTwitter
-                  size={35}
+                  size={45}
                   className="text-blue-400 hover:text-blue-600 cursor-pointer transition-all duration-300 transform hover:scale-110"
                 />
               </>
