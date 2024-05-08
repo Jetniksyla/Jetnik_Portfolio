@@ -1,4 +1,25 @@
 import React, { useState } from "react";
+import {
+  BsGithub,
+  BsLinkedin,
+} from "react-icons/bs";
+import {
+  SiHeroku,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiReact,
+  SiRedux,
+  SiMysql,
+  SiMongodb,
+  SiExpress,
+  SiNodedotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiVisualstudiocode,
+  SiNextdotjs,
+  SiDynamodb,
+} from "react-icons/si";
 
 const AboutMe = () => {
   const skills = [
@@ -154,68 +175,138 @@ const AboutMe = () => {
   ];
 
   const [hoveredSkill, setHoveredSkill] = useState(null);
-
   return (
-    <div className=" mx-7 my-7 p-6 shadow-lg rounded-lg" style={{fontFamily: 'math'}}>
-      <h1 className="text-center text-4xl font-bold text-indigo-700 mb-10">
-        Jetnik Syla
-      </h1>
-      <section className="mb-10 text-center max-w-4xl mx-auto">
-        <p className="text-xl leading-relaxed font-light">
-          I am a passionate full-stack web developer with a background in music,
-          honing my skills through the Columbia Engineering Bootcamp. I am
-          proficient in building scalable web applications and have a knack for
-          creative problem-solving. Outside of programming, I have a zest for
-          life expressed through hiking, biking, working out, running, driving,
-          modeling, and spending time at the beach. My diverse interests fuel my
-          creativity in software development.
-        </p>
-        <p className="italic text-gray-600 text-m">
-          From the precision of music to the logic of coding, my journey is
-          driven by a relentless curiosity and a commitment to excellence.
-        </p>
-      </section>
-      <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6">
-        Core Technical Skills
-        <span className="text-sm text-gray-500">
-          (Hover Over To See The Projects)
-        </span>
-      </h2>
-      <div className="cursor-pointer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {skills.map((skill) => (
-          <div
-            key={skill.name}
-            className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 p-7"
-            onMouseEnter={() => setHoveredSkill(skill.name)}
-            onMouseLeave={() => setHoveredSkill(null)}
-          >
-            <h3 className="text-xl font-semibold text-indigo-600">
-              {skill.name}
-            </h3>
-            <p className="text-lg text-gray-600">{skill.description}</p>
-            {hoveredSkill === skill.name && (
-              <ul className="mt-3 list-disc list-inside">
-                {skill.projects.map((project, index) => (
-                  <li
-                    key={index}
-                    className="text-gray-800 hover:text-indigo-600"
-                  >
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="no-underline"
+    <>
+      <div
+        className=" mx-7 my-7 p-6 shadow-lg rounded-lg"
+        style={{ fontFamily: "math" }}
+      >
+        <h1 className="text-center text-4xl font-bold text-indigo-700 mb-10">
+          Jetnik Syla
+        </h1>
+        <section className="mb-10 text-center max-w-4xl mx-auto">
+          <p className="text-xl leading-relaxed font-light">
+            I am a passionate full-stack web developer with a background in
+            music, honing my skills through the Columbia Engineering Bootcamp. I
+            am proficient in building scalable web applications and have a knack
+            for creative problem-solving. Outside of programming, I have a zest
+            for life expressed through hiking, biking, working out, running,
+            driving, modeling, and spending time at the beach. My diverse
+            interests fuel my creativity in software development.
+          </p>
+          <p className="italic text-gray-600 text-m">
+            From the precision of music to the logic of coding, my journey is
+            driven by a relentless curiosity and a commitment to excellence.
+          </p>
+        </section>
+        <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6">
+          Core Technical Skills
+          <span className="text-sm text-gray-500">
+            (Hover Over To See The Projects)
+          </span>
+        </h2>
+        <div className="cursor-pointer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {skills.map((skill) => (
+            <div
+              key={skill.name}
+              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 p-7"
+              onMouseEnter={() => setHoveredSkill(skill.name)}
+              onMouseLeave={() => setHoveredSkill(null)}
+            >
+              <h3 className="text-xl font-semibold text-indigo-600">
+                {skill.name}
+              </h3>
+              <p className="text-lg text-gray-600">{skill.description}</p>
+              {hoveredSkill === skill.name && (
+                <ul className="mt-3 list-disc list-inside">
+                  {skill.projects.map((project, index) => (
+                    <li
+                      key={index}
+                      className="text-gray-800 hover:text-indigo-600"
                     >
-                      {project.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        ))}
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="no-underline"
+                      >
+                        {project.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+      <div className="flex space-x-4">
+        <SiHeroku
+          size={45}
+          className="text-purple-600 hover:text-purple-800 transition-all duration-300 transform hover:scale-110"
+        />
+        <SiJavascript
+          fontSize={45}
+          className="text-yellow-500 hover:text-yellow-700 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+        <BsGithub
+          fontSize={45}
+          className="text-black hover:text-gray-800 transition-all duration-300 transform hover:scale-110"
+        />
+        <BsLinkedin
+          fontSize={45}
+          className="text-blue-700 hover:text-blue-800 transition-all duration-300 transform hover:scale-110"
+        />
+        <SiCss3
+          fontSize={45}
+          className="text-blue-500 hover:text-blue-700 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+        <SiReact
+          fontSize={45}
+          className="text-blue-300 hover:text-blue-500 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+        <SiRedux
+          fontSize={45}
+          className="text-purple-600 hover:text-purple-800 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+        <SiHtml5
+          fontSize={45}
+          className="text-orange-500 hover:text-orange-700 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+        <SiMysql
+          fontSize={45}
+          className="text-blue-600 hover:text-blue-800 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+        <SiMongodb
+          fontSize={45}
+          className="text-green-500 hover:text-green-700 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+        <SiExpress
+          fontSize={45}
+          className="text-black hover:text-gray-800 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+        <SiNodedotjs
+          fontSize={45}
+          className="text-green-400 hover:text-green-600 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+        <SiTailwindcss
+          fontSize={45}
+          className="text-blue-400 hover:text-blue-500 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+        <SiTypescript
+          fontSize={45}
+          className="text-white bg-blue-600 hover:text-white-800 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+        <SiVisualstudiocode
+          fontSize={45}
+          className="text-blue-500 bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+        <SiNextdotjs
+          fontSize={45}
+          className="text-black hover:text-gray-800 transition-all duration-300 transform hover:scale-110 inline-block"
+        />
+      </div>
+    </>
   );
 };
 

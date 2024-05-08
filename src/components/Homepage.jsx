@@ -34,10 +34,10 @@ const Homepage = () => {
           </h1>
           <hr className="border-t-4 border-indigo-300 w-full" />
           <p className="text-lg lg:text-xl leading-relaxed text-center">
-            I bring innovative full-stack solutions to the table with a
-            background in music and technology, honing skills at Columbia
-            Engineering Bootcamp. Known for proactive leadership and creative
-            problem-solving.
+            I bring innovative full-stack solutions to the table, backed by a
+            diverse background in music and technology, with skills honed at
+            Columbia Engineering Bootcamp. I am recognized for my proactive
+            leadership and creative problem-solving abilities.
           </p>
         </div>
         <div className="flex justify-center items-center w-full lg:w-1/2 relative">
@@ -50,11 +50,11 @@ const Homepage = () => {
         </div>
         <div className="flex flex-col items-center w-full lg:w-1/2 space-y-5">
           <p className="text-3xl lg:text-4xl font-semibold text-indigo-700">
-            Connect With Me
+            Let's Connect
           </p>
           <p className="text-lg lg:text-xl text-center">
-            Elevating digital experiences with cutting-edge solutions and a
-            creative approach.
+            Elevate your digital experiences by partnering with me for
+            cutting-edge solutions and a uniquely creative approach. approach.
           </p>
           <button
             onClick={() => setShowMore(!showMore)}
