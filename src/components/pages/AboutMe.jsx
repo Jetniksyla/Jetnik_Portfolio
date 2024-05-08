@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 
-
 const AboutMe = () => {
   const skills = [
     {
-
       name: "JavaScript, HTML5, CSS3",
       description:
         "Expertise in creating interactive and responsive user interfaces.",
@@ -158,72 +156,59 @@ const AboutMe = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
   return (
-    <div className="font-roboto mx-20 my-20 p-5 bg-gray-100 shadow-lg rounded-lg">
-      <h1 className="text-center text-4xl font-bold text-indigo-600 mb-10">
+    <div className="font-sans mx-20 my-20 p-5 bg-gray-100 shadow-lg rounded-lg">
+      <h1 className="text-center text-4xl font-bold text-indigo-700 mb-10">
         Jetnik Syla
       </h1>
       <section className="mb-10 text-center max-w-4xl mx-auto">
-        <p className="text-lg leading-relaxed">
-          Innovative full-stack web developer with a background in music,
-          currently enhancing my skills at Columbia Engineering Bootcamp.
-          Proficient in proactive leadership, clear communication, and tackling
-          challenges effectively, I bring a creative and analytical approach to
-          solving complex problems and developing high-quality software
-          solutions.
+        <p className="text-lg leading-relaxed font-light">
+          I am a passionate full-stack web developer with a background in music,
+          honing my skills through the Columbia Engineering Bootcamp. I am
+          proficient in building scalable web applications and have a knack for
+          creative problem-solving. Outside of programming, I have a zest for
+          life expressed through hiking, biking, working out, running, driving,
+          modeling, and spending time at the beach. My diverse interests fuel my
+          creativity in software development.
         </p>
-        <p className="italic text-gray-600 ">
-          Driven by curiosity, my journey from music to programming reflects my
-          dedication to learning and mastering new challenges.
+        <p className="italic text-gray-600 text-sm">
+          From the precision of music to the logic of coding, my journey is
+          driven by a relentless curiosity and a commitment to excellence.
         </p>
       </section>
-      <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6 relative">
+      <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6">
         Core Technical Skills
-        <span className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white px-2 text-gray-500 text-lg">
-          Hover Over To See The Projects
+        <span className="text-sm text-gray-500">
+          (Hover Over To See The Projects)
         </span>
       </h2>
-      <hr />
-      <hr />
-      <hr />
-      <hr />
-      <hr />
-      <hr />
       <div className="cursor-pointer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className="bg-white rounded-lg overflow-hidden shadow-lg transition-shadow duration-300"
-            style={{
-              boxShadow:
-                hoveredSkill === skill.name
-                  ? "0 10px 20px rgba(0, 0, 0, 0.1)"
-                  : "0 4px 6px rgba(0, 0, 0, 0.1)",
-            }}
+            className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 p-7"
             onMouseEnter={() => setHoveredSkill(skill.name)}
             onMouseLeave={() => setHoveredSkill(null)}
           >
-            <div className="p-7">
-              <h3 className="text-xl font-semibold text-indigo-600">
-                {skill.name}
-              </h3>
-              <p className="text-lg text-gray-600">{skill.description}</p>
-              {hoveredSkill === skill.name && (
-                <ul className="mt-3">
-                  {skill.projects.map((project, index) => (
-                    <li key={index} className="mt-1 p-2 text-lg text-gray-600 ">
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-indigo-600"
-                      >
-                        {project.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
+            <h3 className="text-xl font-semibold text-indigo-600">
+              {skill.name}
+            </h3>
+            <p className="text-lg text-gray-600">{skill.description}</p>
+            {hoveredSkill === skill.name && (
+              <ul className="mt-3 list-disc list-inside">
+                {skill.projects.map((project, index) => (
+                  <li key={index} className="text-gray-800 hover:text-indigo-600">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="no-underline"
+                    >
+                      {project.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         ))}
       </div>
