@@ -23,6 +23,7 @@ const Homepage = () => {
           backgroundImage: `url(${bgImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          padding: "inherit"
         }}
       >
         <div className="flex flex-col items-center w-full lg:w-1/2 space-y-5">
