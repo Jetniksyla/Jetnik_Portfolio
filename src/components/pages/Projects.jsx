@@ -89,7 +89,7 @@ export default function Projects() {
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="object-cover h-48 w-3/4 mx-auto rounded-none px-6"
+                  className="object-cover h-48 w-full mx-auto rounded-none px-6"
                 />
               </div>
               <div className="p-5">
@@ -104,7 +104,7 @@ export default function Projects() {
                     onClick={() => toggleIcons(index)}
                     className="bg-indigo-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-indigo-500 transition-colors duration-300"
                   >
-                    More Info...
+                    {visibleIcons[index] ? "Show Less" : "Show More"}
                   </button>
                   {visibleIcons[index] && (
                     <div className="flex flex-end items-end ml-2">
