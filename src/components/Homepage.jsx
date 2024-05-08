@@ -9,13 +9,22 @@ import {
 import { SiHeroku } from "react-icons/si";
 import AvatarPic from "../assets/avatar.png";
 import React, { useState } from "react";
+import bgImg from "../assets/Bg.png";
 
 const Homepage = () => {
   const [showMore, setShowMore] = useState(false);
 
   return (
     <>
-      <section className="flex flex-col flex-wrap lg:flex-row justify-center items-center from-blue-200 to-indigo-100 text-gray-800 p-5 lg:p-20 min-h-screen space-y-10 lg:space-x-10" style={{fontFamily: 'math'}}>
+      <div
+        className="flex flex-col flex-wrap lg:flex-row justify-center items-center from-blue-200 to-indigo-100 text-gray-800 p-5 lg:p-20 min-h-screen space-y-10 lg:space-x-10"
+        style={{
+          fontFamily: "math",
+          backgroundImage: `url(${bgImg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="flex flex-col items-center w-full lg:w-1/2 space-y-5">
           <p className="text-2xl lg:text-4xl font-semibold text-indigo-700">
             👋 I'm Jetnik Syla
@@ -25,14 +34,17 @@ const Homepage = () => {
           </h1>
           <hr className="border-t-4 border-indigo-300 w-full" />
           <p className="text-lg lg:text-xl leading-relaxed text-center">
-            I bring innovative full-stack solutions to the table with a background in music and technology, honing skills at Columbia Engineering Bootcamp. Known for proactive leadership and creative problem-solving.
+            I bring innovative full-stack solutions to the table with a
+            background in music and technology, honing skills at Columbia
+            Engineering Bootcamp. Known for proactive leadership and creative
+            problem-solving.
           </p>
         </div>
-        <div className="flex justify-center items-center w-full lg:w-1/2">
+        <div className="flex justify-center items-center w-full lg:w-1/2 relative">
           <img
             src={AvatarPic}
             alt="Jetnik Syla"
-            className="rounded-full shadow-2xl border-8 border-white"
+            className="relative z-10 rounded-full shadow-2xl border-8 border-white"
             style={{ width: "300px", height: "300px" }}
           />
         </div>
@@ -41,7 +53,8 @@ const Homepage = () => {
             Connect With Me
           </p>
           <p className="text-lg lg:text-xl text-center">
-            Elevating digital experiences with cutting-edge solutions and a creative approach.
+            Elevating digital experiences with cutting-edge solutions and a
+            creative approach.
           </p>
           <button
             onClick={() => setShowMore(!showMore)}
@@ -102,7 +115,7 @@ const Homepage = () => {
             )}
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };
