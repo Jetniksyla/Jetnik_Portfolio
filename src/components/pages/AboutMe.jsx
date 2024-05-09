@@ -385,16 +385,32 @@ const AboutMe = () => {
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl p-7"
+              className={`bg-white rounded-lg overflow-hidden shadow-md p-7 ${
+                hoveredSkill === skill.name ? "hovered" : ""
+              }`}
               onMouseEnter={() => setHoveredSkill(skill.name)}
               onMouseLeave={() => setHoveredSkill(null)}
             >
               <h3 className="text-xl font-semibold text-indigo-600">
                 {skill.name}
               </h3>
-              <p className="text-lg text-gray-600">{skill.description}</p>
+              <p className="text-lg text-gray-600">{skill.description} </p>
               {hoveredSkill === skill.name && (
-                <ul className="mt-3 list-disc list-inside">
+                <ul
+                  className="mt-3 list-disc list-inside"
+                  style={{
+                    textDecoration: "none",
+                    transition: "transform 0.5s ease-in-out",
+                    display: "inline-block",
+                    transformOrigin: "center",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.transform = "scale(1.1)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.transform = "scale(1.0)")
+                  }
+                >
                   {skill.projects.map((project, index) => (
                     <li
                       key={index}
@@ -410,6 +426,7 @@ const AboutMe = () => {
                           transition: "transform 0.3s ease-in-out",
                           display: "inline-block",
                           transformOrigin: "center",
+                          paddingLeft: "10px",
                         }}
                         onMouseEnter={(e) =>
                           (e.currentTarget.style.transform = "scale(1.2)")

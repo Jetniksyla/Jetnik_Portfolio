@@ -27,8 +27,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto my-10 p-8 shadow-lg rounded-lg" style={{fontFamily: 'math'}}>
-      <h1 className="text-2xl font-bold text-center mb-6 text-indigo-600">
+    <div
+      className="max-w-lg mx-auto my-10 p-8 shadow-lg rounded-lg"
+      style={{ fontFamily: "math" }}
+    >
+      <h1 className="text-4xl font-bold text-center mb-6 text-indigo-600">
         Contact Me
       </h1>
       <form onSubmit={handleSubmit}>
@@ -70,7 +73,7 @@ const Contact = () => {
         </label>
         <button
           type="submit"
-          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-colors duration-300"
+          className="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-colors duration-300 hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700"
         >
           Contact Me
         </button>

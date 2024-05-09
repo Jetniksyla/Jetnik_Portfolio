@@ -10,6 +10,7 @@ import { SiHeroku } from "react-icons/si";
 import AvatarPic from "../assets/avatar.png";
 import React, { useState } from "react";
 import bgImg from "../assets/Bg.png";
+import ResumeImage from "../assets/Resume.png";
 
 const Homepage = () => {
   const [showMore, setShowMore] = useState(false);
@@ -31,7 +32,7 @@ const Homepage = () => {
           <p className="text-2xl lg:text-4xl font-semibold text-indigo-700">
             👋 I'm Jetnik Syla
           </p>
-          <h1 className="text-2xl lg:text-4xl font-bold text-gray-800">
+          <h1 className="text-3xl lg:text-4xl font-bold text-gray-800">
             Full-stack Web Developer
           </h1>
           <hr className="border-t-4 border-indigo-300 w-full" />

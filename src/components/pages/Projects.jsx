@@ -94,7 +94,7 @@ export default function Projects() {
   return (
     <>
       <h1
-        className="text-center text-5xl font-bold mt-10 mb-6 text-indigo-600"
+        className="text-center text-4xl font-bold mt-10 mb-6 text-indigo-600"
         style={{ fontFamily: "math" }}
       >
         Check out my projects
@@ -144,8 +144,8 @@ export default function Projects() {
                 <div className="flex justify-between items-center">
                   <button
                     onClick={() => toggleIcons(index)}
-                    className="bg-indigo-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-indigo-500 transition-colors duration-300"
-                  >
+                    className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 hover:bg-gradient-to-r hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700"
+                    >
                     {visibleIcons[index] ? "Show Less" : "Show More"}
                   </button>
 

@@ -54,7 +54,7 @@ const Nav = () => {
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "rounded-full px-5 py-2 text-xl cursor-pointer text-white bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+                  ? "rounded-full px-5 py-2 text-xl cursor-pointer bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold transition duration-300 ease-in-out flex items-center space-x-2"
                   : "rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
               }
             >
@@ -65,7 +65,7 @@ const Nav = () => {
               to="/projects"
               className={({ isActive }) =>
                 isActive
-                  ? "rounded-full px-5 py-2 text-xl cursor-pointer text-white bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+                  ? "rounded-full px-5 py-2 text-xl cursor-pointer bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold transition duration-300 ease-in-out flex items-center space-x-2"
                   : "rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
               }
             >
@@ -76,7 +76,7 @@ const Nav = () => {
               to="/contact"
               className={({ isActive }) =>
                 isActive
-                  ? "rounded-full px-5 py-2 text-xl cursor-pointer text-white bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+                  ? "rounded-full px-5 py-2 text-xl cursor-pointer bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold transition duration-300 ease-in-out flex items-center space-x-2"
                   : "rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
               }
             >
@@ -87,7 +87,7 @@ const Nav = () => {
               to="/resume"
               className={({ isActive }) =>
                 isActive
-                  ? "rounded-full px-5 py-2 text-xl cursor-pointer text-white bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+                  ? "rounded-full px-5 py-2 text-xl cursor-pointer bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold transition duration-300 ease-in-out flex items-center space-x-2"
                   : "rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
               }
             >

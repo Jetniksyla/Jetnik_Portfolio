@@ -2,7 +2,10 @@ import ResumeImage from "/src/assets/Resume.png";
 
 const Resume = () => {
   return (
-    <div className="font-roboto mx-auto my-10 max-w-4xl p-8 rounded-lg shadow-lg text-center"style={{fontFamily: 'math'}}>
+    <div
+      className="font-roboto mx-auto my-10 max-w-4xl p-8 rounded-lg shadow-lg text-center"
+      style={{ fontFamily: "math" }}
+    >
       <h1 className=" text-4xl font-bold text-indigo-600 mb-6">Resume</h1>
       <img
         src={ResumeImage}
@@ -12,8 +15,8 @@ const Resume = () => {
       <a
         href={ResumeImage}
         download
-        className="mt-6 inline-block bg-indigo-600 text-white font-bold py-2 px-4 rounded-full hover:bg-indigo-700 transition-colors duration-300"
-      >
+        className="mt-6 flex justify-center bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold py-2 px-4 rounded-full hover:bg-gradient-to-r hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700 transition-colors duration-300"
+        >
         Download Resume
       </a>
     </div>
