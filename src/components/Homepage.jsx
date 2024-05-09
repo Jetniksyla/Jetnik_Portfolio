@@ -17,17 +17,17 @@ const Homepage = () => {
   return (
     <>
       <div
-        className="flex flex-col flex-wrap lg:flex-row justify-center items-center from-blue-200 to-indigo-100 text-gray-800 p-5 lg:p-20 min-h-screen space-y-10 lg:space-x-10"
+        className="flex flex-col flex-wrap lg:flex-row justify-center items-center from-blue-200 to-indigo-100 text-gray-800 mt-7 lg:p-20 min-h-screen space-y-10 lg:space-x-10"
         style={{
           fontFamily: "math",
-          backgroundImage: `url(${bgImg})`,
+          // backgroundImage: `url(${bgImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: "inherit",
-          paddingBottom: "20px",
+          marginBottom: "30px",
         }}
       >
-        <div className="flex flex-col items-center w-full lg:w-1/2 space-y-5">
+        <div className="flex flex-col items-center w-full p-5 lg:w-1/2 space-y-5">
           <p className="text-2xl lg:text-4xl font-semibold text-indigo-700">
             👋 I'm Jetnik Syla
           </p>
@@ -50,7 +50,7 @@ const Homepage = () => {
             style={{ width: "300px", height: "300px", opacity: 0.9 }}
           />
         </div>
-        <div className="flex flex-col items-center w-full lg:w-1/2 space-y-5">
+        <div className="flex p-5 flex-col items-center w-full lg:w-1/2 space-y-5">
           <p className="text-3xl lg:text-4xl font-semibold text-indigo-700">
             Let's Connect
           </p>
@@ -58,13 +58,14 @@ const Homepage = () => {
             Elevate your digital experiences by partnering with me for
             cutting-edge solutions and a uniquely creative approach. approach.
           </p>
-          <button
+          {/* This is a button that has a function to show more icons but I will use it for another time */}
+          {/* <button
             onClick={() => setShowMore(!showMore)}
             className="px-10 py-3 rounded-lg text-lg font-medium shadow-md bg-indigo-600 text-white hover:bg-indigo-700 transition-colors duration-300"
           >
             {showMore ? "Show Less" : "Show More"}
-          </button>
-          <div className="flex space-x-4">
+          </button> */}
+          <div className="flex space-x-4 mb-7">
             <a
               href="https://github.com/Jetniksyla"
               target="_blank"
