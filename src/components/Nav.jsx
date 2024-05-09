@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { FaLaptop } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+
 import { CgTag } from "react-icons/cg";
 import {
   FaHome,
@@ -20,7 +22,6 @@ const Nav = () => {
       <div className="flex items-center justify-between p-10 lg:flex-row">
         <div className="flex items-center space-x-2 font-serif text-3xl tracking-wider">
           <FaLaptop size="1.5em" className="text-indigo-600" />
-          {/* Laptop img */}
           <Link to="/" className="text-indigo-600">
             Hire Me
           </Link>
@@ -40,71 +41,76 @@ const Nav = () => {
             />
           )}
           <div className="hidden lg:flex space-x-2">
-            <Link
+            <NavLink
               to="/"
               className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+              activeClassName="bg-indigo-600 text-white"
             >
               {/* <FaHome className="text-lg" /> */}
               <span>Home</span>
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/about"
               className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+              activeClassName="bg-indigo-600 text-white"
             >
               {/* <FaUserAlt className="text-lg" /> */}
               <span>About</span>
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/projects"
               className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+              activeClassName="bg-indigo-600 text-white"
             >
               {/* <FaProjectDiagram className="text-lg" /> */}
               <span>Projects</span>
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/contact"
               className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+              activeClassName="bg-indigo-600 text-white"
             >
               {/* <FaEnvelopeOpenText className="text-lg" /> */}
               <span>Contact</span>
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/resume"
               className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+              activeClassName="bg-indigo-600 text-white"
             >
               {/* <FaFileAlt className="text-lg" /> */}
               <span>Resume</span>
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>
 
       {toggle && (
         <div className="font-roboto bg-gray-100 shadow-lg rounded-lg p-5">
-          <Link
+          <NavLink
             to="/about"
             className="block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
           >
             About
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/projects"
             className="block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
           >
             Projects
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/contact"
             className="block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
           >
             Contact
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/resume"
             className="block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
           >
             Resume
-          </Link>
+          </NavLink>
         </div>
       )}
     </div>
