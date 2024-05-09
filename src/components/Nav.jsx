@@ -1,10 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { CgTag } from "react-icons/cg";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenuAlt1 } from "react-icons/hi";
-
-import { FaBriefcase } from "react-icons/fa";
+import { FaLaptop } from "react-icons/fa";
+import { CgTag } from "react-icons/cg";
+import {
+  FaHome,
+  FaUserAlt,
+  FaEnvelopeOpenText,
+  FaFileAlt,
+  FaProjectDiagram,
+} from "react-icons/fa";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
@@ -13,7 +19,7 @@ const Nav = () => {
     <div className=" bg-gray-100 text-gray-800" style={{ fontFamily: "math" }}>
       <div className="flex items-center justify-between p-10 lg:flex-row">
         <div className="flex items-center space-x-2 font-serif text-3xl tracking-wider">
-          <FaBriefcase size="1.5em" className="text-indigo-600" />{" "}
+          <FaLaptop size="1.5em" className="text-indigo-600" />
           {/* Laptop img */}
           <Link to="/" className="text-indigo-600">
             Hire Me
@@ -36,33 +42,38 @@ const Nav = () => {
           <div className="hidden lg:flex space-x-2">
             <Link
               to="/"
-              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
             >
-              Home
+              {/* <FaHome className="text-lg" /> */}
+              <span>Home</span>
             </Link>
             <Link
               to="/about"
-              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
             >
-              About
+              {/* <FaUserAlt className="text-lg" /> */}
+              <span>About</span>
             </Link>
             <Link
               to="/projects"
-              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
             >
-              Projects
+              {/* <FaProjectDiagram className="text-lg" /> */}
+              <span>Projects</span>
             </Link>
             <Link
               to="/contact"
-              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
             >
-              Contact
+              {/* <FaEnvelopeOpenText className="text-lg" /> */}
+              <span>Contact</span>
             </Link>
             <Link
               to="/resume"
-              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
             >
-              Resume
+              {/* <FaFileAlt className="text-lg" /> */}
+              <span>Resume</span>
             </Link>
           </div>
         </div>
