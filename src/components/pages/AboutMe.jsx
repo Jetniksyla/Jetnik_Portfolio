@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import {
   SiHeroku,
@@ -405,7 +404,19 @@ const AboutMe = () => {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="no-underline link-style"
+                        className="noreferrer"
+                        style={{
+                          textDecoration: "none",
+                          transition: "transform 0.3s ease-in-out",
+                          display: "inline-block",
+                          transformOrigin: "center",
+                        }}
+                        onMouseEnter={(e) =>
+                          (e.currentTarget.style.transform = "scale(1.2)")
+                        }
+                        onMouseLeave={(e) =>
+                          (e.currentTarget.style.transform = "scale(1.0)")
+                        }
                       >
                         {project.title}
                       </a>
