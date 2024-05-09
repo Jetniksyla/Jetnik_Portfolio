@@ -127,6 +127,7 @@ export default function Projects() {
                   src={project.img}
                   alt={project.title}
                   className="object-cover h-48 w-full mx-auto rounded-none px-6"
+                  style={{ height: "330px" }}
                 />
               </div>
               <div className="p-5">
@@ -159,7 +160,7 @@ export default function Projects() {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={3}
+                        strokeWidth={2}
                         d="M1 9l9 5 -9 5"
                       />
                     </svg>
