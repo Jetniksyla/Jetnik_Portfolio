@@ -49,34 +49,47 @@ const Nav = () => {
               {/* <FaHome className="text-lg" /> */}
               <span>Home</span>
             </NavLink>
+
             <NavLink
               to="/about"
-              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
-              activeClassName="bg-indigo-600 text-white"
+              className={({ isActive }) =>
+                isActive
+                  ? "rounded-full px-5 py-2 text-xl cursor-pointer text-white bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+                  : "rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+              }
             >
               {/* <FaUserAlt className="text-lg" /> */}
               <span>About</span>
             </NavLink>
             <NavLink
               to="/projects"
-              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
-              activeClassName="bg-indigo-600 text-white"
+              className={({ isActive }) =>
+                isActive
+                  ? "rounded-full px-5 py-2 text-xl cursor-pointer text-white bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+                  : "rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+              }
             >
               {/* <FaProjectDiagram className="text-lg" /> */}
               <span>Projects</span>
             </NavLink>
             <NavLink
               to="/contact"
-              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
-              activeClassName="bg-indigo-600 text-white"
+              className={({ isActive }) =>
+                isActive
+                  ? "rounded-full px-5 py-2 text-xl cursor-pointer text-white bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+                  : "rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+              }
             >
               {/* <FaEnvelopeOpenText className="text-lg" /> */}
               <span>Contact</span>
             </NavLink>
             <NavLink
               to="/resume"
-              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
-              activeClassName="bg-indigo-600 text-white"
+              className={({ isActive }) =>
+                isActive
+                  ? "rounded-full px-5 py-2 text-xl cursor-pointer text-white bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+                  : "rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
+              }
             >
               {/* <FaFileAlt className="text-lg" /> */}
               <span>Resume</span>
@@ -89,25 +102,41 @@ const Nav = () => {
         <div className="font-roboto bg-gray-100 shadow-lg rounded-lg p-5">
           <NavLink
             to="/about"
-            className="block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+            className={({ isActive }) =>
+              isActive
+                ? "block px-5 py-2 text-xl text-white bg-indigo-600 transition duration-300 ease-in-out"
+                : "block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+            }
           >
             About
           </NavLink>
           <NavLink
             to="/projects"
-            className="block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+            className={({ isActive }) =>
+              isActive
+                ? "block px-5 py-2 text-xl text-white bg-indigo-600 transition duration-300 ease-in-out"
+                : "block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+            }
           >
             Projects
           </NavLink>
           <NavLink
             to="/contact"
-            className="block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+            className={({ isActive }) =>
+              isActive
+                ? "block px-5 py-2 text-xl text-white bg-indigo-600 transition duration-300 ease-in-out"
+                : "block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+            }
           >
             Contact
           </NavLink>
           <NavLink
             to="/resume"
-            className="block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+            className={({ isActive }) =>
+              isActive
+                ? "block px-5 py-2 text-xl text-white bg-indigo-600 transition duration-300 ease-in-out"
+                : "block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
+            }
           >
             Resume
           </NavLink>
