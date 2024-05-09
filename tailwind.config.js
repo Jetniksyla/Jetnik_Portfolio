@@ -14,6 +14,15 @@ export default {
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
       },
+      keyframes: {
+        horizontalSlide: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(10px)' }, 
+        },
+      },
+      animation: {
+        'horizontal-slide': 'horizontalSlide 0.8s ease-in-out infinite alternate',
+      },
     },
   },
   plugins: [],

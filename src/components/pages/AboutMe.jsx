@@ -32,6 +32,7 @@ import {
   SiThunderbird,
 } from "react-icons/si";
 import { FaGoogle, FaServer, FaFileCode } from "react-icons/fa";
+import { classNames } from "@react-pdf-viewer/core";
 
 const AboutMe = () => {
   const skills = [
@@ -250,139 +251,142 @@ const AboutMe = () => {
           </span>
         </h2>
         <section
-          className="flex-2 mb-4 p-2"
+          className="flex-2 mb-4 p-auto"
           style={{
-            height: "auto",
+            alignContent: "center",
+            height: "70px",
             border: "1px solid purple",
             borderRadius: "10px",
             boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
+            overflow: "hidden",
+            cursor: "pointer",
           }}
         >
           <Slider {...sliderSettings}>
             <SiHeroku
               size={45}
-              className="text-purple-600 hover:text-purple-800 transition-all duration-300 transform hover:scale-110"
+              className="text-purple-600 hover:text-purple-800 transition-all duration-300 transform hover:scale-90"
             />
             <SiNodemon
               size={45}
-              className="text-green-500 hover:text-green-700 transition-all duration-300 transform hover:scale-110"
+              className="text-green-500 hover:text-green-700 transition-all duration-300 transform hover:scale-90"
             />
             <SiJavascript
               size={45}
-              className="text-yellow-500 hover:text-yellow-700 transition-all duration-300 transform hover:scale-110"
+              className="text-yellow-500 hover:text-yellow-700 transition-all duration-300 transform hover:scale-90"
             />
             <SiVite
               size={45}
-              className="text-blue-500 hover:text-blue-700 transition-all duration-300 transform hover:scale-110"
+              className="text-blue-500 hover:text-blue-700 transition-all duration-300 transform hover:scale-90"
             />
             <BsGithub
               size={45}
-              className="text-gray-700 hover:text-gray-800 transition-all duration-300 transform hover:scale-110"
+              className="text-gray-700 hover:text-gray-800 transition-all duration-300 transform hover:scale-90"
             />
             <SiSlack
               size={45}
-              className="text-purple-500 hover:text-purple-700 transition-all duration-300 transform hover:scale-110"
+              className="text-purple-500 hover:text-purple-700 transition-all duration-300 transform hover:scale-90"
             />
             <SiCss3
               size={45}
-              className="text-blue-500 hover:text-blue-700 transition-all duration-300 transform hover:scale-110"
+              className="text-blue-500 hover:text-blue-700 transition-all duration-300 transform hover:scale-90"
             />
             <SiReact
               size={45}
-              className="text-blue-300 hover:text-blue-500 transition-all duration-300 transform hover:scale-110"
+              className="text-blue-300 hover:text-blue-500 transition-all duration-300 transform hover:scale-90"
             />
             <SiRedux
               size={45}
-              className="text-purple-600 hover:text-purple-800 transition-all duration-300 transform hover:scale-110"
+              className="text-purple-600 hover:text-purple-800 transition-all duration-300 transform hover:scale-90"
             />
             <SiGitlab
               size={45}
-              className="text-red-500 hover:text-red-700 transition-all duration-300 transform hover:scale-110"
+              className="text-red-500 hover:text-red-700 transition-all duration-300 transform hover:scale-90"
             />
             <SiFigma
               size={45}
-              className="text-purple-700 hover:text-purple-900 transition-all duration-300 transform hover:scale-110"
+              className="text-purple-700 hover:text-purple-900 transition-all duration-300 transform hover:scale-90"
             />
             <SiPostman
               size={45}
-              className="text-orange-400 hover:text-orange-600 transition-all duration-300 transform hover:scale-110"
+              className="text-orange-400 hover:text-orange-600 transition-all duration-300 transform hover:scale-90"
             />
             <SiGit
               size={45}
-              className="text-black hover:text-gray-800 transition-all duration-300 transform hover:scale-110"
+              className="text-black hover:text-gray-800 transition-all duration-300 transform hover:scale-90"
             />
             <SiHtml5
               size={45}
-              className="text-orange-500 hover:text-orange-700 transition-all duration-300 transform hover:scale-110"
+              className="text-orange-500 hover:text-orange-700 transition-all duration-300 transform hover:scale-90"
             />
             <SiMysql
               size={45}
-              className="text-blue-600 hover:text-blue-800 transition-all duration-300 transform hover:scale-110"
+              className="text-blue-600 hover:text-blue-800 transition-all duration-300 transform hover:scale-90"
             />
             <SiMongodb
               size={45}
-              className="text-green-500 hover:text-green-700 transition-all duration-300 transform hover:scale-110"
+              className="text-green-500 hover:text-green-700 transition-all duration-300 transform hover:scale-90"
             />
             <SiExpress
               size={45}
-              className="text-black hover:text-gray-800 transition-all duration-300 transform hover:scale-110"
+              className="text-black hover:text-gray-800 transition-all duration-300 transform hover:scale-90"
             />
             <SiNodedotjs
               size={45}
-              className="text-green-400 hover:text-green-600 transition-all duration-300 transform hover:scale-110"
+              className="text-green-400 hover:text-green-600 transition-all duration-300 transform hover:scale-90"
             />
             <SiTailwindcss
               size={45}
-              className="text-blue-400 hover:text-blue-500 transition-all duration-300 transform hover:scale-110"
+              className="text-blue-400 hover:text-blue-500 transition-all duration-300 transform hover:scale-90"
             />
             <SiTypescript
               size={45}
-              className="bg-white text-blue-600 transition-all duration-300 transform hover:scale-110"
+              className="bg-white text-blue-600 transition-all duration-300 transform hover:scale-90"
             />
             <SiVisualstudiocode
               size={45}
-              className="text-blue-500 bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-110"
+              className="text-blue-500 bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-90"
             />
             <SiNextdotjs
               size={45}
-              className="text-black hover:text-gray-800 transition-all duration-300 transform hover:scale-110"
+              className="text-black hover:text-gray-800 transition-all duration-300 transform hover:scale-90"
             />
             <FaFileCode
               size={45}
-              className="text-gray-600 hover:text-gray-800 transition-all duration-300 transform hover:scale-110"
+              className="text-gray-600 hover:text-gray-800 transition-all duration-300 transform hover:scale-90"
             />
             <SiNpm
               size={45}
-              className="text-red-600 hover:text-red-800 transition-all duration-300 transform hover:scale-110"
+              className="text-red-600 hover:text-red-800 transition-all duration-300 transform hover:scale-90"
             />
             <SiJest
               size={45}
-              className="text-red-400 hover:text-red-600 transition-all duration-300 transform hover:scale-110"
+              className="text-red-400 hover:text-red-600 transition-all duration-300 transform hover:scale-90"
             />
             <SiInsomnia
               size={45}
-              className="text-purple-500 hover:text-purple-700 transition-all duration-300 transform hover:scale-110"
+              className="text-purple-500 hover:text-purple-700 transition-all duration-300 transform hover:scale-90"
             />
             <SiThunderbird
               size={45}
-              className="text-blue-600 hover:text-blue-800 transition-all duration-300 transform hover:scale-110"
+              className="text-blue-600 hover:text-blue-800 transition-all duration-300 transform hover:scale-90"
             />
             <FaGoogle
               size={45}
-              className="text-yellow-400 hover:text-yellow-800 transition-all duration-300 transform hover:scale-110"
+              className="text-yellow-400 hover:text-yellow-800 transition-all duration-300 transform hover:scale-90"
             />
             <FaServer
               size={45}
-              className="text-gray-700 hover:text-gray-800 transition-all duration-300 transform hover:scale-110"
+              className="text-gray-700 hover:text-gray-800 transition-all duration-300 transform hover:scale-90"
             />
           </Slider>
         </section>
 
-        <div className="cursor-pointer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="cursor-pointer transition-all duration-300 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 p-7"
+              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl p-7"
               onMouseEnter={() => setHoveredSkill(skill.name)}
               onMouseLeave={() => setHoveredSkill(null)}
             >
@@ -395,13 +399,13 @@ const AboutMe = () => {
                   {skill.projects.map((project, index) => (
                     <li
                       key={index}
-                      className="text-gray-800 hover:text-indigo-600"
+                      className="text-gray-800 hover:text-indigo-600 transition-colors duration-300"
                     >
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="no-underline"
+                        className="no-underline link-style"
                       >
                         {project.title}
                       </a>
