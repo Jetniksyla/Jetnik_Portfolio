@@ -1,149 +1,134 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineClose } from "react-icons/ai";
-import { HiMenuAlt1 } from "react-icons/hi";
-import { FaLaptop } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import Modal from "react-modal";
+import dotenv from "dotenv";
 
-import { CgTag } from "react-icons/cg";
-import {
-  FaHome,
-  FaUserAlt,
-  FaEnvelopeOpenText,
-  FaFileAlt,
-  FaProjectDiagram,
-} from "react-icons/fa";
+dotenv.config();
 
-const Nav = () => {
-  const [toggle, setToggle] = useState(false);
+Modal.setAppElement("#root");
+
+const Contact = () => {
+  const form = useRef();
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    message: "",
+  });
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (formData.user_email.includes("@")) {
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          form.current,
+          process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            setFormData({ user_name: "", user_email: "", message: "" });
+            setModalIsOpen(true);
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+            alert("Failed to send message, please try again.");
+          }
+        );
+    } else {
+      alert("Please enter a valid email address.");
+    }
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
   return (
-    <div className=" bg-gray-100 text-gray-800" style={{ fontFamily: "math" }}>
-      <div className="flex items-center justify-between p-10 lg:flex-row">
-        <div className="flex items-center space-x-2 font-serif text-3xl tracking-wider">
-          <FaLaptop size="1.5em" className="text-indigo-600" />
-          <Link to="/" className="text-indigo-600">
-            Hire Me
-          </Link>
+    <div
+      className="max-w-lg mx-auto my-10 p-8 shadow-lg rounded-lg bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100"
+      style={{ fontFamily: "math" }}
+    >
+      <h1 className="text-4xl font-bold text-center mb-6 text-indigo-600 dark:text-indigo-400">
+        Contact Me
+      </h1>
+      <form ref={form} onSubmit={sendEmail}>
+        <label className="block mb-4">
+          <span className="text-gray-800 dark:text-gray-300">Name:</span>
+          <input
+            type="text"
+            name="user_name"
+            value={formData.user_name}
+            onChange={handleChange}
+            className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400"
+            placeholder="Enter your name"
+            required
+          />
+        </label>
+        <label className="block mb-4">
+          <span className="text-gray-800 dark:text-gray-300">Email:</span>
+          <input
+            type="email"
+            name="user_email"
+            value={formData.user_email}
+            onChange={handleChange}
+            className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400"
+            placeholder="Enter your email"
+            required
+          />
+        </label>
+        <label className="block mb-6">
+          <span className="text-gray-800 dark:text-gray-300">Message:</span>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400"
+            rows="4"
+            placeholder="Your message"
+            required
+          ></textarea>
+        </label>
+        <button
+          type="submit"
+          className="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-colors duration-300 hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700"
+        >
+          Submit
+        </button>
+      </form>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Success Modal"
+        className="fixed inset-0 flex items-center justify-center p-4"
+        overlayClassName="fixed inset-0 bg-black bg-opacity-50"
+      >
+        <div className="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
+          <h2 className="text-2xl font-bold mb-4">
+            Message Sent Successfully!
+          </h2>
+          <p>Thank you for your message. We will get back to you shortly.</p>
+          <button
+            onClick={closeModal}
+            className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
+          >
+            Close
+          </button>
         </div>
-        <div>
-          {toggle ? (
-            <AiOutlineClose
-              onClick={() => setToggle(false)}
-              size="1.5em"
-              className="cursor-pointer text-gray-600 hover:text-indigo-600 transition duration-300 lg:hidden"
-            />
-          ) : (
-            <HiMenuAlt1
-              onClick={() => setToggle(true)}
-              size="1.5em"
-              className="cursor-pointer text-gray-600 hover:text-indigo-600 transition duration-300 lg:hidden"
-            />
-          )}
-          <div className="hidden lg:flex space-x-2">
-            <NavLink
-              to="/"
-              className="rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
-              activeClassName="bg-indigo-600 text-white"
-            >
-              {/* <FaHome className="text-lg" /> */}
-              <span>Home</span>
-            </NavLink>
-
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive
-                  ? "rounded-full px-5 py-2 text-xl cursor-pointer bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold transition duration-300 ease-in-out flex items-center space-x-2"
-                  : "rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
-              }
-            >
-              {/* <FaUserAlt className="text-lg" /> */}
-              <span>About</span>
-            </NavLink>
-            <NavLink
-              to="/projects"
-              className={({ isActive }) =>
-                isActive
-                  ? "rounded-full px-5 py-2 text-xl cursor-pointer bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold transition duration-300 ease-in-out flex items-center space-x-2"
-                  : "rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
-              }
-            >
-              {/* <FaProjectDiagram className="text-lg" /> */}
-              <span>Projects</span>
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive
-                  ? "rounded-full px-5 py-2 text-xl cursor-pointer bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold transition duration-300 ease-in-out flex items-center space-x-2"
-                  : "rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
-              }
-            >
-              {/* <FaEnvelopeOpenText className="text-lg" /> */}
-              <span>Contact</span>
-            </NavLink>
-            <NavLink
-              to="/resume"
-              className={({ isActive }) =>
-                isActive
-                  ? "rounded-full px-5 py-2 text-xl cursor-pointer bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold transition duration-300 ease-in-out flex items-center space-x-2"
-                  : "rounded-full px-5 py-2 text-xl cursor-pointer text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out flex items-center space-x-2"
-              }
-            >
-              {/* <FaFileAlt className="text-lg" /> */}
-              <span>Resume</span>
-            </NavLink>
-          </div>
-        </div>
-      </div>
-
-      {toggle && (
-        <div className="font-roboto bg-gray-100 shadow-lg rounded-lg p-5">
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive
-                ? "block px-5 py-2 text-xl text-white bg-indigo-600 transition duration-300 ease-in-out"
-                : "block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
-            }
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              isActive
-                ? "block px-5 py-2 text-xl text-white bg-indigo-600 transition duration-300 ease-in-out"
-                : "block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
-            }
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive
-                ? "block px-5 py-2 text-xl text-white bg-indigo-600 transition duration-300 ease-in-out"
-                : "block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
-            }
-          >
-            Contact
-          </NavLink>
-          <NavLink
-            to="/resume"
-            className={({ isActive }) =>
-              isActive
-                ? "block px-5 py-2 text-xl text-white bg-indigo-600 transition duration-300 ease-in-out"
-                : "block px-5 py-2 text-xl text-gray-800 hover:text-white hover:bg-indigo-600 transition duration-300 ease-in-out"
-            }
-          >
-            Resume
-          </NavLink>
-        </div>
-      )}
+      </Modal>
     </div>
   );
 };
 
-export default Nav;
+export default Contact;

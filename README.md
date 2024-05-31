@@ -10,6 +10,7 @@ Welcome to my personal portfolio repository! This site showcases my skills and p
 - **Accessibility**: Navigable and usable by people with disabilities, adhering to WCAG guidelines.
 - **Live Project Previews**: Allows visitors to interact directly with my work.
 - **Smooth Hover Effects**: Enhances user experience with smooth transitions.
+- **Dark Mode**: Provides a dark theme option for better accessibility and user preference.
 
 ## Technologies Used
 
@@ -55,14 +56,17 @@ A passionate software developer with a background in music, I have seamlessly tr
 Here are some highlights from my portfolio:
 
 **Home:**
-![Home](src/assets/Portfolio.png)
+![Home](src/assets/Home.png)
+![Home](src/assets/Home-Darkmode.png)
 
 **About:**
 ![About](src/assets/About.png)
+![About](src/assets/About-Darkmode.png)
 
 ## Responsive Design
 
------------------ ![Responsive Design](src/assets/Portfolio&Media.png)
+![Responsive Design](src/assets/Media.png)
+![Responsive Design Dark Mode](src/assets/Media-Darkmode.png)
 
 This portfolio is fully responsive and optimized for all screen sizes.
 
@@ -84,6 +88,7 @@ Experience my portfolio in action by visiting the following link:
 [View Live Portfolio](https://genuine-clafoutis-055e7a.netlify.app/)
 
 ## License
+
 [![License: Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 This project is licensed under the Apache 2.0 License - see the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0) file for details.

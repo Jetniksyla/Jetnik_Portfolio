@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import Modal from "react-modal";
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     message: "",
   });
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,57 +19,77 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    if (formData.email.includes("@")) {
-      console.log("Submitting form data:", formData);
-      alert("Thank you for your message!");
-      // Here I might want to integrate an actual submission logic in the future, via an API
+
+    if (formData.user_email.includes("@")) {
+      emailjs
+        .sendForm(
+          "service_h9uj1ce",
+          "template_p4b5aca",
+          form.current,
+          "tTiqFBU2VPwjIazWw"
+        )
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            setFormData({ user_name: "", user_email: "", message: "" });
+            setModalIsOpen(true);
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+            alert("Failed to send message, please try again.");
+          }
+        );
     } else {
       alert("Please enter a valid email address.");
     }
   };
 
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <div
-      className="max-w-lg mx-auto my-10 p-8 shadow-lg rounded-lg"
+      className="max-w-lg mx-auto my-10 p-8 shadow-lg rounded-lg bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100"
       style={{ fontFamily: "math" }}
     >
-      <h1 className="text-4xl font-bold text-center mb-6 text-indigo-600">
+      <h1 className="text-4xl font-bold text-center mb-6 text-indigo-600 dark:text-indigo-400">
         Contact Me
       </h1>
-      <form onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={sendEmail}>
         <label className="block mb-4">
-          <span className="text-gray-800">Name:</span>
+          <span className="text-gray-800 dark:text-gray-300">Name:</span>
           <input
             type="text"
-            name="name"
-            value={formData.name}
+            name="user_name"
+            value={formData.user_name}
             onChange={handleChange}
-            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:bg-white"
+            className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400"
             placeholder="Enter your name"
             required
           />
         </label>
         <label className="block mb-4">
-          <span className="text-gray-800">Email:</span>
+          <span className="text-gray-800 dark:text-gray-300">Email:</span>
           <input
             type="email"
-            name="email"
-            value={formData.email}
+            name="user_email"
+            value={formData.user_email}
             onChange={handleChange}
-            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:bg-white"
+            className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400"
             placeholder="Enter your email"
             required
           />
         </label>
         <label className="block mb-6">
-          <span className="text-gray-800">Message:</span>
+          <span className="text-gray-800 dark:text-gray-300">Message:</span>
           <textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:bg-white"
+            className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400"
             rows="4"
             placeholder="Your message"
             required
@@ -75,9 +99,29 @@ const Contact = () => {
           type="submit"
           className="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-colors duration-300 hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700"
         >
-          Contact Me
+          Submit
         </button>
       </form>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Success Modal"
+        className="fixed inset-0 flex items-center justify-center p-4"
+        overlayClassName="fixed inset-0 bg-black bg-opacity-50"
+      >
+        <div className="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
+          <h2 className="text-2xl font-bold mb-4">
+            Message Sent Successfully!
+          </h2>
+          <p>Thank you for your message. We will get back to you shortly.</p>
+          <button
+            onClick={closeModal}
+            className="mt-4 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline transition-colors duration-300 hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700"
+          >
+            Close
+          </button>
+        </div>
+      </Modal>
     </div>
   );
 };

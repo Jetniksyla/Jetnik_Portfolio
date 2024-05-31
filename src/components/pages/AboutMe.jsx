@@ -222,10 +222,10 @@ const AboutMe = () => {
   return (
     <>
       <div
-        className="mx-7 my-7 p-6 shadow-lg rounded-lg"
+        className="mx-7 my-7 p-6 shadow-lg rounded-lg bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100"
         style={{ fontFamily: "math" }}
       >
-        <h1 className="text-center text-4xl font-bold text-indigo-700 mb-10">
+        <h1 className="text-center text-4xl font-bold text-indigo-700 dark:text-indigo-400 mb-10">
           Jetnik Syla
         </h1>
         <section className="mb-10 text-center max-w-4xl mx-auto">
@@ -238,19 +238,19 @@ const AboutMe = () => {
             driving, modeling, and spending time at the beach. My diverse
             interests fuel my creativity in software development.
           </p>
-          <p className="italic text-gray-600 text-m">
+          <p className="italic text-gray-600 dark:text-gray-400 text-m">
             From the precision of music to the logic of coding, my journey is
             driven by a relentless curiosity and a commitment to excellence.
           </p>
         </section>
-        <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6">
+        <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-200 text-center mb-6">
           Core Technical Skills
-          <span className="text-sm text-gray-500">
+          <span className="text-sm text-gray-500 dark:text-gray-400">
             (Hover Over To See The Projects)
           </span>
         </h2>
         <section
-          className="flex-2 mb-4 p-auto"
+          className="flex-2 mb-4 p-auto bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow"
           style={{
             alignContent: "center",
             height: "70px",
@@ -280,7 +280,7 @@ const AboutMe = () => {
             />
             <BsGithub
               size={45}
-              className="text-gray-700 hover:text-gray-800 transition-all duration-300 transform hover:scale-90"
+              className="text-gray-700 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all duration-300 transform hover:scale-90"
             />
             <SiSlack
               size={45}
@@ -312,7 +312,7 @@ const AboutMe = () => {
             />
             <SiGit
               size={45}
-              className="text-black hover:text-gray-800 transition-all duration-300 transform hover:scale-90"
+              className="text-black dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all duration-300 transform hover:scale-90"
             />
             <SiHtml5
               size={45}
@@ -328,7 +328,7 @@ const AboutMe = () => {
             />
             <SiExpress
               size={45}
-              className="text-black hover:text-gray-800 transition-all duration-300 transform hover:scale-90"
+              className="text-black dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all duration-300 transform hover:scale-90"
             />
             <SiNodedotjs
               size={45}
@@ -340,19 +340,19 @@ const AboutMe = () => {
             />
             <SiTypescript
               size={45}
-              className="bg-white text-blue-600 transition-all duration-300 transform hover:scale-90"
+              className=" text-blue-600 transition-all duration-300 transform hover:scale-90"
             />
             <SiVisualstudiocode
               size={45}
-              className="text-blue-500 bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-90"
+              className="text-blue-500  hover:text-blue-600 transition-all duration-300 transform hover:scale-90"
             />
             <SiNextdotjs
               size={45}
-              className="text-black hover:text-gray-800 transition-all duration-300 transform hover:scale-90"
+              className="text-black dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all duration-300 transform hover:scale-90"
             />
             <FaFileCode
               size={45}
-              className="text-gray-600 hover:text-gray-800 transition-all duration-300 transform hover:scale-90"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all duration-300 transform hover:scale-90"
             />
             <SiNpm
               size={45}
@@ -376,7 +376,7 @@ const AboutMe = () => {
             />
             <FaServer
               size={45}
-              className="text-gray-700 hover:text-gray-800 transition-all duration-300 transform hover:scale-90"
+              className="text-gray-700 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all duration-300 transform hover:scale-90"
             />
           </Slider>
         </section>
@@ -385,16 +385,18 @@ const AboutMe = () => {
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className={`bg-white rounded-lg overflow-hidden shadow-md p-7 ${
+              className={`bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md p-7 border border-gray-300 dark:border-gray-700 ${
                 hoveredSkill === skill.name ? "hovered" : ""
               }`}
               onMouseEnter={() => setHoveredSkill(skill.name)}
               onMouseLeave={() => setHoveredSkill(null)}
             >
-              <h3 className="text-xl font-semibold text-indigo-600">
+              <h3 className="text-xl font-semibold text-indigo-600 dark:text-indigo-400">
                 {skill.name}
               </h3>
-              <p className="text-lg text-gray-600">{skill.description} </p>
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                {skill.description}
+              </p>
               {hoveredSkill === skill.name && (
                 <ul
                   className="mt-3 list-disc list-inside"
@@ -414,7 +416,7 @@ const AboutMe = () => {
                   {skill.projects.map((project, index) => (
                     <li
                       key={index}
-                      className="text-gray-800 hover:text-indigo-600 transition-colors duration-300"
+                      className="text-gray-800 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
                     >
                       <a
                         href={project.githubUrl}

@@ -18,7 +18,7 @@ const Homepage = () => {
   return (
     <>
       <div
-        className="flex flex-col flex-wrap lg:flex-row justify-center items-center from-blue-200 to-indigo-100 text-gray-800 mt-7 lg:p-20 min-h-screen space-y-10 lg:space-x-10"
+        className="flex flex-col flex-wrap lg:flex-row justify-center items-center from-blue-200 to-indigo-100  mt-7 lg:p-20 min-h-screen space-y-10 lg:space-x-10"
         style={{
           fontFamily: "math",
           // backgroundImage: `url(${bgImg})`,
@@ -32,7 +32,7 @@ const Homepage = () => {
           <p className="text-2xl lg:text-4xl font-semibold text-indigo-700">
             👋 I'm Jetnik Syla
           </p>
-          <h1 className="text-3xl lg:text-4xl font-bold text-gray-800">
+          <h1 className="text-3xl lg:text-4xl font-bold ">
             Full-stack Web Developer
           </h1>
           <hr className="border-t-4 border-indigo-300 w-full" />
