@@ -1,3 +1,4 @@
+// Contact form sends live email 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Modal from "react-modal";
