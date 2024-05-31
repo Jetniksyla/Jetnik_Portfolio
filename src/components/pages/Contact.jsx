@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Modal from "react-modal";
 
+Modal.setAppElement("#root");
+
 const Contact = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
@@ -25,14 +27,13 @@ const Contact = () => {
     if (formData.user_email.includes("@")) {
       emailjs
         .sendForm(
-          "service_h9uj1ce",
-          "template_p4b5aca",
+          import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
           form.current,
-          "tTiqFBU2VPwjIazWw"
+          import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
         )
         .then(
           () => {
-            console.log("SUCCESS!");
             setFormData({ user_name: "", user_email: "", message: "" });
             setModalIsOpen(true);
           },
@@ -116,7 +117,7 @@ const Contact = () => {
           <p>Thank you for your message. We will get back to you shortly.</p>
           <button
             onClick={closeModal}
-            className="mt-4 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline transition-colors duration-300 hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700"
+            className="mt-4 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white px-4 py-2 rounded-full"
           >
             Close
           </button>

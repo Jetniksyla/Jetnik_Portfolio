@@ -8,7 +8,7 @@ import AboutMe from "./components/pages/AboutMe.jsx";
 import Footer from "./components/pages/Footer";
 import React, { useEffect, useState } from "react";
 import dotenv from 'dotenv';
-dotenv.config();
+
 
 export default function App() {
   const [theme, setTheme] = useState(null);
