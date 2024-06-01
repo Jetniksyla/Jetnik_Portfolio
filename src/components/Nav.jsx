@@ -104,7 +104,7 @@ const Nav = () => {
             className={({ isActive }) =>
               isActive
                 ? "block px-5 py-2 text-xl bg-gradient-to-r rounded-full from-purple-600 via-indigo-600 to-blue-600 text-white transition duration-300 ease-in-out"
-                : "block px-5 py-2 text-xl text-gray-800 dark:text-gray-300 hover:text-white hover:bg-indigo-600 dark:hover:bg-indigo-400 transition duration-300 ease-in-out"
+                : "block px-5 py-2 text-xl text-gray-800 dark:text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-400 hover:via-indigo-400 hover:to-blue-400 transition duration-300 ease-in-out rounded-full"
             }
           >
             About
@@ -115,7 +115,7 @@ const Nav = () => {
             className={({ isActive }) =>
               isActive
                 ? "block px-5 py-2 text-xl bg-gradient-to-r rounded-full from-purple-600 via-indigo-600 to-blue-600 text-white transition duration-300 ease-in-out"
-                : "block px-5 py-2 text-xl text-gray-800 dark:text-gray-300 hover:text-white hover:bg-indigo-600 dark:hover:bg-indigo-400 transition duration-300 ease-in-out"
+                : "block px-5 py-2 text-xl text-gray-800 dark:text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-400 hover:via-indigo-400 hover:to-blue-400 transition duration-300 ease-in-out rounded-full"
             }
           >
             Projects
@@ -126,7 +126,7 @@ const Nav = () => {
             className={({ isActive }) =>
               isActive
                 ? "block px-5 py-2 text-xl bg-gradient-to-r rounded-full from-purple-600 via-indigo-600 to-blue-600 text-white transition duration-300 ease-in-out"
-                : "block px-5 py-2 text-xl text-gray-800 dark:text-gray-300 hover:text-white hover:bg-indigo-600 dark:hover:bg-indigo-400 transition duration-300 ease-in-out"
+                : "block px-5 py-2 text-xl text-gray-800 dark:text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-400 hover:via-indigo-400 hover:to-blue-400 transition duration-300 ease-in-out rounded-full"
             }
           >
             Contact
@@ -137,7 +137,7 @@ const Nav = () => {
             className={({ isActive }) =>
               isActive
                 ? "block px-5 py-2 text-xl bg-gradient-to-r rounded-full from-purple-600 via-indigo-600 to-blue-600 text-white transition duration-300 ease-in-out"
-                : "block px-5 py-2 text-xl text-gray-800 dark:text-gray-300 hover:text-white hover:bg-indigo-600 dark:hover:bg-indigo-400 transition duration-300 ease-in-out"
+                : "block px-5 py-2 text-xl text-gray-800 dark:text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-400 hover:via-indigo-400 hover:to-blue-400 transition duration-300 ease-in-out rounded-full"
             }
           >
             Resume
