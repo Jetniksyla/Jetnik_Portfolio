@@ -7,6 +7,10 @@ import { FaLaptop } from "react-icons/fa";
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
 
+  const handleCloseMenu = () => {
+    setToggle(false);
+  };
+
   return (
     <div
       className="bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-100"
@@ -93,12 +97,13 @@ const Nav = () => {
       </div>
 
       {toggle && (
-        <div className="font-roboto bg-gray-100 dark:bg-gray-800 shadow-lg rounded-lg p-5">
+        <div className="font-roboto bg-gray-200 dark:bg-gray-800 shadow-lg rounded-lg p-5 pt-0">
           <NavLink
             to="/about"
+            onClick={handleCloseMenu}
             className={({ isActive }) =>
               isActive
-                ? "block px-5 py-2 text-xl text-white bg-indigo-600 dark:bg-indigo-400 transition duration-300 ease-in-out"
+                ? "block px-5 py-2 text-xl bg-gradient-to-r rounded-full from-purple-600 via-indigo-600 to-blue-600 text-white transition duration-300 ease-in-out"
                 : "block px-5 py-2 text-xl text-gray-800 dark:text-gray-300 hover:text-white hover:bg-indigo-600 dark:hover:bg-indigo-400 transition duration-300 ease-in-out"
             }
           >
@@ -106,9 +111,10 @@ const Nav = () => {
           </NavLink>
           <NavLink
             to="/projects"
+            onClick={handleCloseMenu}
             className={({ isActive }) =>
               isActive
-                ? "block px-5 py-2 text-xl text-white bg-indigo-600 dark:bg-indigo-400 transition duration-300 ease-in-out"
+                ? "block px-5 py-2 text-xl bg-gradient-to-r rounded-full from-purple-600 via-indigo-600 to-blue-600 text-white transition duration-300 ease-in-out"
                 : "block px-5 py-2 text-xl text-gray-800 dark:text-gray-300 hover:text-white hover:bg-indigo-600 dark:hover:bg-indigo-400 transition duration-300 ease-in-out"
             }
           >
@@ -116,9 +122,10 @@ const Nav = () => {
           </NavLink>
           <NavLink
             to="/contact"
+            onClick={handleCloseMenu}
             className={({ isActive }) =>
               isActive
-                ? "block px-5 py-2 text-xl text-white bg-indigo-600 dark:bg-indigo-400 transition duration-300 ease-in-out"
+                ? "block px-5 py-2 text-xl bg-gradient-to-r rounded-full from-purple-600 via-indigo-600 to-blue-600 text-white transition duration-300 ease-in-out"
                 : "block px-5 py-2 text-xl text-gray-800 dark:text-gray-300 hover:text-white hover:bg-indigo-600 dark:hover:bg-indigo-400 transition duration-300 ease-in-out"
             }
           >
@@ -126,9 +133,10 @@ const Nav = () => {
           </NavLink>
           <NavLink
             to="/resume"
+            onClick={handleCloseMenu}
             className={({ isActive }) =>
               isActive
-                ? "block px-5 py-2 text-xl text-white bg-indigo-600 dark:bg-indigo-400 transition duration-300 ease-in-out"
+                ? "block px-5 py-2 text-xl bg-gradient-to-r rounded-full from-purple-600 via-indigo-600 to-blue-600 text-white transition duration-300 ease-in-out"
                 : "block px-5 py-2 text-xl text-gray-800 dark:text-gray-300 hover:text-white hover:bg-indigo-600 dark:hover:bg-indigo-400 transition duration-300 ease-in-out"
             }
           >
